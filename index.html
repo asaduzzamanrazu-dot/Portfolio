@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Asaduzzaman Razu | Professional Portfolio</title>
+    <title>Asaduzzaman Razu | Portfolio & Credentials</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <style>
         :root {
-            --primary-color: #1e3a8a;
+            --primary-color: #0f172a;
             --secondary-color: #2563eb;
             --accent-color: #3b82f6;
             --bg-color: #f8fafc;
@@ -28,104 +28,108 @@
             background-color: var(--bg-color);
             color: var(--text-primary);
             line-height: 1.6;
-            padding: 20px;
+            padding-bottom: 60px;
         }
 
         .container {
-            max-width: 1000px;
+            max-width: 1050px;
             margin: 0 auto;
+            padding: 0 20px;
         }
 
-        /* Hero Section (Top Banner) */
+        /* Top Modern Hero Header */
         .hero-section {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: #ffffff;
+            padding: 50px 40px;
+            border-radius: 16px;
+            margin: 30px 0;
             display: flex;
             align-items: center;
             gap: 40px;
-            background: var(--card-bg);
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            margin-bottom: 40px;
-            border-top: 6px solid var(--secondary-color);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+
+        .hero-img-box {
+            position: relative;
+            flex-shrink: 0;
         }
 
         .hero-img {
-            width: 220px;
-            height: 220px;
+            width: 200px;
+            height: 200px;
             border-radius: 50%;
             object-fit: cover;
-            border: 6px solid #f1f5f9;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            border: 4px solid var(--accent-color);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
         }
 
-        .hero-content {
-            flex: 1;
-        }
-
-        .hero-content h1 {
+        .hero-details h1 {
             font-size: 32px;
-            color: var(--primary-color);
-            margin-bottom: 5px;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 6px;
         }
 
-        .hero-content h2 {
+        .hero-details h2 {
             font-size: 18px;
-            color: var(--text-secondary);
+            color: #93c5fd;
             font-weight: 500;
             margin-bottom: 20px;
         }
 
-        .contact-info {
+        .contact-grid {
             display: flex;
             flex-wrap: wrap;
-            gap: 15px;
+            gap: 15px 25px;
             margin-bottom: 20px;
         }
 
         .contact-item {
             font-size: 14px;
-            color: var(--text-secondary);
+            color: #cbd5e1;
             display: flex;
             align-items: center;
-            gap: 6px;
+            gap: 8px;
         }
 
         .contact-item i {
-            color: var(--secondary-color);
+            color: var(--accent-color);
         }
 
         .contact-item a {
-            color: var(--text-secondary);
+            color: #cbd5e1;
             text-decoration: none;
+            transition: color 0.2s;
         }
 
         .contact-item a:hover {
-            color: var(--secondary-color);
+            color: #ffffff;
         }
 
-        .skills-container {
+        .skill-tags {
             display: flex;
             flex-wrap: wrap;
             gap: 8px;
         }
 
-        .skill-tag {
-            background: #dbeafe;
-            color: #1e40af;
-            padding: 5px 12px;
+        .tag {
+            background: rgba(255, 255, 255, 0.1);
+            color: #e2e8f0;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 4px 12px;
             border-radius: 20px;
             font-size: 13px;
-            font-weight: 600;
         }
 
-        /* Sections and Cards */
+        /* Card Section Styling */
         .section-title {
-            font-size: 24px;
+            font-size: 22px;
             color: var(--primary-color);
-            margin-bottom: 25px;
+            margin: 40px 0 20px 0;
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 12px;
             border-bottom: 2px solid var(--border-color);
             padding-bottom: 10px;
         }
@@ -138,107 +142,152 @@
             background: var(--card-bg);
             border-radius: 12px;
             padding: 30px;
-            margin-bottom: 30px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+            margin-bottom: 25px;
             border: 1px solid var(--border-color);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .card:hover {
+            box-shadow: 0 8px 15px rgba(0,0,0,0.05);
         }
 
         .card-header {
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
-            margin-bottom: 12px;
+            margin-bottom: 15px;
             flex-wrap: wrap;
             gap: 10px;
         }
 
         .card-title {
-            font-size: 20px;
+            font-size: 19px;
             color: var(--primary-color);
             font-weight: 700;
         }
 
         .card-subtitle {
             font-size: 15px;
-            color: var(--text-secondary);
+            color: var(--secondary-color);
             font-weight: 600;
+            margin-top: 2px;
         }
 
         .badge {
-            background: #f1f5f9;
-            color: #475569;
-            font-size: 13px;
-            padding: 5px 12px;
+            background: #dbeafe;
+            color: #1e40af;
+            font-size: 12px;
+            padding: 6px 14px;
             border-radius: 20px;
             font-weight: 600;
-            border: 1px solid #cbd5e1;
         }
 
         .card-body p, .card-body ul {
             color: var(--text-secondary);
             font-size: 15px;
-            margin-bottom: 15px;
             line-height: 1.7;
         }
 
         .card-body ul {
             margin-left: 20px;
+            margin-top: 10px;
         }
 
-        /* PDF Viewer Styling */
-        .pdf-container {
+        .card-body ul li {
+            margin-bottom: 8px;
+        }
+
+        /* Certificate Preview Image Box */
+        .cert-preview-box {
             margin-top: 20px;
-            background: #f8fafc;
+            background: #f1f5f9;
             border-radius: 8px;
             padding: 15px;
             border: 1px dashed #cbd5e1;
+            text-align: center;
         }
 
-        .pdf-viewer {
-            width: 100%;
-            height: 450px;
-            border: none;
+        .cert-img {
+            max-width: 100%;
+            max-height: 400px;
             border-radius: 6px;
-            background: #ffffff;
-            box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            cursor: pointer;
+            transition: transform 0.2s;
         }
 
-        .btn-group {
-            margin-top: 12px;
-            display: flex;
-            gap: 10px;
+        .cert-img:hover {
+            transform: scale(1.01);
         }
 
-        .btn {
+        .btn-action {
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            padding: 10px 18px;
+            margin-top: 12px;
+            padding: 8px 18px;
             background-color: var(--secondary-color);
             color: #ffffff;
             text-decoration: none;
             border-radius: 6px;
-            font-size: 14px;
+            font-size: 13px;
             font-weight: 600;
             transition: background 0.2s;
         }
 
-        .btn:hover {
-            background-color: var(--primary-color);
+        .btn-action:hover {
+            background-color: #1d4ed8;
         }
 
-        /* Mobile Responsiveness */
+        /* Lightbox Image Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 999;
+            padding-top: 50px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.85);
+            overflow: auto;
+        }
+
+        .modal-content {
+            margin: auto;
+            display: block;
+            max-width: 85%;
+            max-height: 85vh;
+            border-radius: 8px;
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 20px;
+            right: 35px;
+            color: #ffffff;
+            font-size: 35px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        /* Mobile Layout Adjustments */
         @media (max-width: 768px) {
             .hero-section {
                 flex-direction: column;
                 text-align: center;
                 padding: 30px 20px;
             }
-            .contact-info, .skills-container {
+            .contact-grid {
                 justify-content: center;
             }
-            .pdf-viewer {
-                height: 350px;
+            .skill-tags {
+                justify-content: center;
+            }
+            .hero-img {
+                width: 160px;
+                height: 160px;
             }
         }
     </style>
@@ -246,22 +295,24 @@
 <body>
 
     <div class="container">
-        
-        <!-- HERO SECTION (ওয়েবসাইটের শুরুতে ছবি ও পরিচিতি) -->
+
+        <!-- HERO SECTION HEADER -->
         <header class="hero-section">
-            <img src="profile.jpg" alt="Asaduzzaman Razu" class="hero-img">
-            <div class="hero-content">
+            <div class="hero-img-box">
+                <img src="profile.png" alt="Asaduzzaman Razu" class="hero-img">
+            </div>
+            <div class="hero-details">
                 <h1>Asaduzzaman Razu</h1>
                 <h2>Digital Communication & Field Operations Specialist</h2>
                 
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <a href="mailto:asadzzamanrazu@gmail.com">asadzzamanrazu@gmail.com</a>
-                    </div>
+                <div class="contact-grid">
                     <div class="contact-item">
                         <i class="fas fa-phone"></i>
                         <span>+8801714390671</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:asadzzamanrazu@gmail.com">asadzzamanrazu@gmail.com</a>
                     </div>
                     <div class="contact-item">
                         <i class="fas fa-map-marker-alt"></i>
@@ -273,21 +324,23 @@
                     </div>
                 </div>
 
-                <div class="skills-container">
-                    <span class="skill-tag">Field Auditing</span>
-                    <span class="skill-tag">Fund Management</span>
-                    <span class="skill-tag">Digital Marketing (SEO & SMM)</span>
-                    <span class="skill-tag">Office Admin</span>
-                    <span class="skill-tag">Data Reporting</span>
+                <div class="skill-tags">
+                    <span class="tag">Field Auditing</span>
+                    <span class="tag">Fund Management</span>
+                    <span class="tag">MS Excel & Office</span>
+                    <span class="tag">Digital Marketing (SEO & SMM)</span>
+                    <span class="tag">Program Administration</span>
                 </div>
             </div>
         </header>
 
-        <!-- PROFESSIONAL SUMMARY -->
+        <!-- ABOUT / PROFILE SUMMARY -->
         <section class="card">
-            <h2 class="section-title"><i class="fas fa-user-tie"></i> Profile Summary</h2>
+            <h2 class="section-title" style="margin-top:0;"><i class="fas fa-user-circle"></i> Profile Summary</h2>
             <div class="card-body">
-                <p>A Master's graduate in Political Science and NSDA Level-03 Certified Digital Marketer with 8 years of solid experience in office administration, accounting, and field auditing. Skilled in MS Excel for data tracking, field operations, and client communication. Seeking an opportunity to leverage my dual expertise in administration and operations within the NGO sector.</p>
+                <p>
+                    A Master's graduate in Political Science and NSDA Level-03 Certified Digital Marketer with <strong>8 years of solid experience (2018–2025)</strong> in office administration, financial fund management, and field auditing[span_9](start_span)[span_9](end_span)[span_10](start_span)[span_10](end_span). Highly skilled in MS Excel for record tracking, field operations management, compliance monitoring, and client/stakeholder communication[span_11](start_span)[span_11](end_span)[span_12](start_span)[span_12](end_span). Seeking an opportunity to leverage dual expertise in administrative management and field operations within the NGO or development sector[span_13](start_span)[span_13](end_span).
+                </p>
             </div>
         </section>
 
@@ -305,18 +358,16 @@
                     <span class="badge">Session: 2021-22 | CGPA: 2.69</span>
                 </div>
                 <div class="card-body">
-                    <p>Completed Master's degree under National University with specialized coursework in Bangladesh Politics, Governance, Security Studies, and Political Thought.</p>
+                    <p>Coursework focused on Bangladesh Politics, Governance, Security Studies, Political Thought, and Geopolitics.</p>
                 </div>
-                <div class="pdf-container">
-                    <iframe class="pdf-viewer" src="mss_certificate.pdf"></iframe>
-                    <div class="btn-group">
-                        <a href="mss_certificate.pdf" target="_blank" class="btn"><i class="fas fa-external-link-alt"></i> View Full PDF</a>
-                        <a href="mss_certificate.pdf" download class="btn" style="background:#475569;"><i class="fas fa-download"></i> Download</a>
-                    </div>
+                <div class="cert-preview-box">
+                    <img src="mss_certificate.png" alt="MSS Result Sheet" class="cert-img" onclick="openModal(this.src)">
+                    <br>
+                    <a href="mss_certificate.png" target="_blank" class="btn-action"><i class="fas fa-expand"></i> View Full Document</a>
                 </div>
             </div>
 
-            <!-- BA -->
+            <!-- BA PASS -->
             <div class="card">
                 <div class="card-header">
                     <div>
@@ -326,14 +377,12 @@
                     <span class="badge">Exam Year: 2018 | CGPA: 2.92</span>
                 </div>
                 <div class="card-body">
-                    <p>Successfully achieved Bachelor of Arts (Pass Course) degree from National University.</p>
+                    <p>Achieved Bachelor of Arts degree with consistent academic performance under National University.</p>
                 </div>
-                <div class="pdf-container">
-                    <iframe class="pdf-viewer" src="ba_certificate.pdf"></iframe>
-                    <div class="btn-group">
-                        <a href="ba_certificate.pdf" target="_blank" class="btn"><i class="fas fa-external-link-alt"></i> View Full PDF</a>
-                        <a href="ba_certificate.pdf" download class="btn" style="background:#475569;"><i class="fas fa-download"></i> Download</a>
-                    </div>
+                <div class="cert-preview-box">
+                    <img src="ba_certificate.jpg" alt="BA Pass Certificate" class="cert-img" onclick="openModal(this.src)">
+                    <br>
+                    <a href="ba_certificate.jpg" target="_blank" class="btn-action"><i class="fas fa-expand"></i> View Full Document</a>
                 </div>
             </div>
 
@@ -347,14 +396,12 @@
                     <span class="badge">Passing Year: 2015 | GPA: 3.75</span>
                 </div>
                 <div class="card-body">
-                    <p>Passed Higher Secondary Certificate examination under Humanities group from Board of Intermediate and Secondary Education, Rajshahi.</p>
+                    <p>Passed Higher Secondary examination under Humanities group from Rajshahi Education Board.</p>
                 </div>
-                <div class="pdf-container">
-                    <iframe class="pdf-viewer" src="hsc_certificate.pdf"></iframe>
-                    <div class="btn-group">
-                        <a href="hsc_certificate.pdf" target="_blank" class="btn"><i class="fas fa-external-link-alt"></i> View Full PDF</a>
-                        <a href="hsc_certificate.pdf" download class="btn" style="background:#475569;"><i class="fas fa-download"></i> Download</a>
-                    </div>
+                <div class="cert-preview-box">
+                    <img src="hsc_certificate.jpg" alt="HSC Certificate" class="cert-img" onclick="openModal(this.src)">
+                    <br>
+                    <a href="hsc_certificate.jpg" target="_blank" class="btn-action"><i class="fas fa-expand"></i> View Full Document</a>
                 </div>
             </div>
 
@@ -368,14 +415,12 @@
                     <span class="badge">Passing Year: 2013 | GPA: 3.88</span>
                 </div>
                 <div class="card-body">
-                    <p>Passed Secondary School Certificate examination under Humanities group with good academic standing.</p>
+                    <p>Successfully completed Secondary School Certificate under Humanities group.</p>
                 </div>
-                <div class="pdf-container">
-                    <iframe class="pdf-viewer" src="ssc_certificate.pdf"></iframe>
-                    <div class="btn-group">
-                        <a href="ssc_certificate.pdf" target="_blank" class="btn"><i class="fas fa-external-link-alt"></i> View Full PDF</a>
-                        <a href="ssc_certificate.pdf" download class="btn" style="background:#475569;"><i class="fas fa-download"></i> Download</a>
-                    </div>
+                <div class="cert-preview-box">
+                    <img src="ssc_certificate.jpg" alt="SSC Certificate" class="cert-img" onclick="openModal(this.src)">
+                    <br>
+                    <a href="ssc_certificate.jpg" target="_blank" class="btn-action"><i class="fas fa-expand"></i> View Full Document</a>
                 </div>
             </div>
         </section>
@@ -393,27 +438,24 @@
                     <span class="badge">Jan 2018 - Dec 2025 (8 Years)</span>
                 </div>
                 <div class="card-body">
-                    <p><strong>Major Responsibilities:</strong></p>
                     <ul>
-                        <li><strong>Audit & Financial Review:</strong> Conducted internal audits for cash books, daily transactions, income-expenditure records, and local unit financial vouchers.</li>
-                        <li><strong>Office & Field Management:</strong> Managed field visits, membership drives, subscription collection, and updated ledger registers.</li>
-                        <li><strong>Database & Portal Operations:</strong> Operated official online web portal, maintained digital databases, and generated regular reports.</li>
-                        <li><strong>Office Administration:</strong> Supervised administrative tasks, coordinated membership approvals, and maintained organizational compliance.</li>
+                        <li><strong>Audit & Financial Review:</strong> Executed comprehensive internal audits of cash books, daily transactions, income-expenditure ledgers, and unit financial vouchers[span_14](start_span)[span_14](end_span).</li>
+                        <li><strong>Fund & Ledger Management:</strong> Reconciled accounts and systematized member subscription tracking utilizing advanced MS Excel spreadsheets[span_15](start_span)[span_15](end_span)[span_16](start_span)[span_16](end_span).</li>
+                        <li><strong>Field Operations & Management:</strong> Conducted field unit audits, led recruitment drives, collected union dues, and updated records across local chapters[span_17](start_span)[span_17](end_span)[span_18](start_span)[span_18](end_span).</li>
+                        <li><strong>Portal & Office Administration:</strong> Supervised daily office operations, updated web portal database records, drafted official documents, and handled compliance reporting[span_19](start_span)[span_19](end_span)[span_20](start_span)[span_20](end_span).</li>
                     </ul>
                 </div>
-                <div class="pdf-container">
-                    <iframe class="pdf-viewer" src="experience_certificate.pdf"></iframe>
-                    <div class="btn-group">
-                        <a href="experience_certificate.pdf" target="_blank" class="btn"><i class="fas fa-external-link-alt"></i> View Experience Letter</a>
-                        <a href="experience_certificate.pdf" download class="btn" style="background:#475569;"><i class="fas fa-download"></i> Download</a>
-                    </div>
+                <div class="cert-preview-box">
+                    <img src="experience_certificate.jpg" alt="Experience Letter" class="cert-img" onclick="openModal(this.src)">
+                    <br>
+                    <a href="experience_certificate.jpg" target="_blank" class="btn-action"><i class="fas fa-expand"></i> View Experience Letter</a>
                 </div>
             </div>
         </section>
 
-        <!-- PROFESSIONAL TRAINING -->
+        <!-- TRAINING & CERTIFICATION -->
         <section>
-            <h2 class="section-title"><i class="fas fa-certificate"></i> Professional Certification</h2>
+            <h2 class="section-title"><i class="fas fa-certificate"></i> Training & Professional Certification</h2>
 
             <div class="card">
                 <div class="card-header">
@@ -421,29 +463,49 @@
                         <div class="card-title">NSDA Level-3 Certified Digital Marketer</div>
                         <div class="card-subtitle">Fazlull Haque Technical Training Institute, Manda, Naogaon</div>
                     </div>
-                    <span class="badge">Government Certified (2026)</span>
+                    <span class="badge">Government Certified (NSDA)</span>
                 </div>
                 <div class="card-body">
-                    <p>Government certified professional competency under National Skill Development Authority (NSDA). Key competencies include:</p>
+                    <p>Government certified competency qualification assessment conducted under National Skill Development Authority (NSDA)[span_21](start_span)[span_21](end_span). Key units evaluated:</p>
                     <ul>
-                        <li>Negotiation Skills & Workplace Ethics</li>
-                        <li>Office Application Software Operation</li>
-                        <li>Social Media Marketing (SMM)</li>
-                        <li>Search Engine Marketing (SEM) & Search Engine Optimization (SEO)</li>
+                        <li><strong>Workplace Ethics & Negotiation:</strong> Practical negotiation skills and ICT workplace ethical standards[span_22](start_span)[span_22](end_span).</li>
+                        <li><strong>Digital & Search Engine Marketing:</strong> Concepts of Digital Marketing, SEM strategies, and hands-on Search Engine Optimization (SEO)[span_23](start_span)[span_23](end_span).</li>
+                        <li><strong>Social Media Marketing (SMM):</strong> Strategic implementation of campaigns across digital platforms[span_24](start_span)[span_24](end_span).</li>
                     </ul>
                 </div>
-                <div class="pdf-container">
-                    <iframe class="pdf-viewer" src="nsda_certificate.pdf"></iframe>
-                    <div class="btn-group">
-                        <a href="nsda_certificate.pdf" target="_blank" class="btn"><i class="fas fa-external-link-alt"></i> View NSDA Result PDF</a>
-                        <a href="nsda_certificate.pdf" download class="btn" style="background:#475569;"><i class="fas fa-download"></i> Download</a>
-                    </div>
+                <div class="cert-preview-box">
+                    <img src="nsda_certificate.png" alt="NSDA Assessment Result" class="cert-img" onclick="openModal(this.src)">
+                    <br>
+                    <a href="nsda_certificate.png" target="_blank" class="btn-action"><i class="fas fa-expand"></i> View Official Assessment Sheet</a>
                 </div>
             </div>
         </section>
 
     </div>
 
+    <!-- LIGHTBOX IMAGE POPUP MODAL -->
+    <div id="imgModal" class="modal">
+        <span class="close-modal" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImg">
+    </div>
+
+    <script>
+        function openModal(imgSrc) {
+            document.getElementById("imgModal").style.display = "block";
+            document.getElementById("modalImg").src = imgSrc;
+        }
+
+        function closeModal() {
+            document.getElementById("imgModal").style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            var modal = document.getElementById("imgModal");
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
 </body>
-                                          </html>
+                </html>
     
