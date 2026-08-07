@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Md. Asaduzzaman Razu (AR Akash) - Portfolio</title>
-    <!-- Google Fonts & FontAwesome Icons -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
@@ -22,7 +21,6 @@
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
         body { background-color: var(--bg-light); color: var(--text-color); line-height: 1.6; }
 
-        /* Navigation Bar */
         nav { background: var(--secondary); padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
         .logo { color: #fff; font-size: 1.5rem; font-weight: 700; }
         .logo span { color: var(--primary); }
@@ -30,174 +28,139 @@
         .nav-links a { color: #cbd5e1; text-decoration: none; font-weight: 500; transition: 0.3s; }
         .nav-links a:hover { color: var(--primary); }
 
-        /* Hero Section */
-        .hero { background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); color: white; padding: 80px 5%; text-align: center; }
-        .hero h1 { font-size: 2.8rem; margin-bottom: 10px; font-weight: 700; }
-        .hero h3 { color: var(--primary); font-size: 1.4rem; margin-bottom: 20px; font-weight: 400; }
-        .hero p { max-width: 800px; margin: 0 auto 30px; color: #94a3b8; font-size: 1.05rem; }
-        .contact-info { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-bottom: 30px; }
-        .contact-item { display: flex; align-items: center; gap: 8px; color: #e2e8f0; font-size: 0.95rem; }
+        .hero { background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); color: white; padding: 60px 5%; text-align: center; }
+        .profile-img { width: 150px; height: 150px; border-radius: 50%; border: 4px solid var(--primary); object-fit: cover; margin-bottom: 15px; }
+        .hero h1 { font-size: 2.4rem; margin-bottom: 5px; font-weight: 700; }
+        .hero h3 { color: var(--primary); font-size: 1.2rem; margin-bottom: 15px; font-weight: 400; }
+        .hero p { max-width: 800px; margin: 0 auto 25px; color: #94a3b8; font-size: 0.95rem; }
+        .contact-info { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-bottom: 25px; }
+        .contact-item { display: flex; align-items: center; gap: 8px; color: #e2e8f0; font-size: 0.9rem; }
 
-        /* Buttons */
         .btn-group { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; }
         .btn { padding: 10px 20px; border-radius: 6px; text-decoration: none; font-weight: 600; transition: 0.3s; display: inline-flex; align-items: center; gap: 8px; border: none; cursor: pointer; font-size: 0.9rem; }
         .btn-primary { background: var(--primary); color: white; }
         .btn-primary:hover { background: var(--primary-dark); }
-        .btn-outline { border: 2px solid var(--primary); color: var(--primary); background: transparent; }
-        .btn-outline:hover { background: var(--primary); color: white; }
-        .btn-cert { background: #e0f2fe; color: #0369a1; border: 1px solid #bae6fd; margin-top: 15px; }
-        .btn-cert:hover { background: #0284c7; color: white; }
 
-        /* Main Container */
-        .container { max-width: 1100px; margin: 50px auto; padding: 0 20px; }
+        .container { max-width: 1000px; margin: 40px auto; padding: 0 20px; }
         .section-title { font-size: 1.8rem; color: var(--text-dark); margin-bottom: 30px; text-align: center; position: relative; }
         .section-title::after { content: ''; width: 60px; height: 4px; background: var(--primary); display: block; margin: 8px auto 0; border-radius: 2px; }
 
-        /* Cards Grid */
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; margin-bottom: 50px; }
-        .card { background: var(--card-bg); padding: 25px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); transition: 0.3s; border-top: 4px solid var(--primary); display: flex; flex-direction: column; justify-content: space-between; }
-        .card:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0,0,0,0.1); }
-        .card h3 { color: var(--text-dark); margin-bottom: 12px; font-size: 1.25rem; }
-        .card p { font-size: 0.95rem; color: #64748b; margin-bottom: 10px; }
+        .card { background: var(--card-bg); padding: 25px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); margin-bottom: 35px; border-top: 4px solid var(--primary); }
+        .card h3 { color: var(--text-dark); margin-bottom: 8px; font-size: 1.3rem; }
+        .card-meta { font-size: 0.9rem; color: var(--primary); font-weight: 600; margin-bottom: 12px; }
+        .card p { font-size: 0.95rem; margin-bottom: 10px; }
+        .card ul { padding-left: 20px; margin-bottom: 15px; font-size: 0.95rem; }
 
-        /* Timeline / Experience */
-        .timeline-item { background: var(--card-bg); padding: 25px; border-radius: 8px; margin-bottom: 25px; box-shadow: 0 2px 10px rgba(0,0,0,0.04); border-left: 4px solid var(--primary); }
-        .timeline-header { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; margin-bottom: 10px; }
-        .timeline-role { font-size: 1.2rem; font-weight: 700; color: var(--text-dark); }
-        .timeline-badge { background: #e0f2fe; color: #0369a1; padding: 4px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; }
+        .doc-preview { width: 100%; max-width: 700px; display: block; margin: 20px auto 10px; border-radius: 8px; border: 1px solid #cbd5e1; box-shadow: 0 4px 10px rgba(0,0,0,0.08); }
 
-        /* Footer */
         footer { background: var(--secondary); color: #94a3b8; text-align: center; padding: 25px; margin-top: 60px; font-size: 0.9rem; }
-        footer a { color: var(--primary); text-decoration: none; }
 
         @media (max-width: 768px) {
-            .hero h1 { font-size: 2rem; }
+            .hero h1 { font-size: 1.8rem; }
             .nav-links { display: none; }
         }
     </style>
 </head>
 <body>
 
-    <!-- Navigation Bar -->
     <nav>
         <div class="logo">AR <span>AKASH</span></div>
         <ul class="nav-links">
             <li><a href="#about">About</a></li>
             <li><a href="#experience">Experience</a></li>
+            <li><a href="#certifications">Training & Certification</a></li>
             <li><a href="#education">Education</a></li>
-            <li><a href="#certifications">Certifications</a></li>
         </ul>
     </nav>
 
-    <!-- Hero Section -->
     <section class="hero" id="about">
+        <img src="profile.jpg" alt="Md. Asaduzzaman Razu" class="profile-img">
         <h1>Md. Asaduzzaman Razu (AR Akash)</h1>
-        <h3>Operations, Accounts & Field Audit Specialist | Digital Marketer</h3>
-        <p>A Master's graduate in Political Science and NSDA Level-3 Certified Digital Marketer with 8 years of solid experience (Jan 1, 2018 – Dec 31, 2025) in office administration, financial accounting, and field auditing.</p>
+        <h3>Digital Communication & Field Operations Specialist</h3>
+        <p>A Master's graduate in Political Science and NSDA Level-3 Certified Digital Marketer with 8 years of solid experience in office administration, accounting, and field auditing[span_3](start_span)[span_3](end_span). Seeking opportunities in Administration and Operations[span_4](start_span)[span_4](end_span).</p>
         
         <div class="contact-info">
             <div class="contact-item"><i class="fa-solid fa-location-dot"></i> Niamotpur, Naogaon</div>
             <div class="contact-item"><i class="fa-solid fa-phone"></i> 01714390671</div>
-            <div class="contact-item"><i class="fa-solid fa-envelope"></i> asaduzzamanrazu@gmail.com</div>
+            <div class="contact-item"><i class="fa-solid fa-envelope"></i> asadzzamanrazu@gmail.com</div>
         </div>
 
         <div class="btn-group">
             <a href="https://www.linkedin.com/in/asaduzzaman-razu" class="btn btn-primary" target="_blank"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
             <a href="https://www.facebook.com/arakashsa" class="btn btn-primary" target="_blank"><i class="fa-brands fa-facebook"></i> Facebook</a>
-            <a href="https://drive.google.com/drive/folders/1VHACdR4zTriIiqcUDx3fk7CXOR53aJVK" class="btn btn-outline" target="_blank" style="color:#fff; border-color:#fff;"><i class="fa-solid fa-folder-open"></i> All Certificates Folder</a>
         </div>
     </section>
 
     <div class="container">
 
-        <!-- Work Experience Section -->
+        <!-- 1. Work Experience -->
         <h2 class="section-title" id="experience">Work Experience</h2>
-        <div class="timeline-item">
-            <div class="timeline-header">
-                <div class="timeline-role">Accounts & Field Auditor</div>
-                <div class="timeline-badge">Jan 1, 2018 – Dec 31, 2025 (8 Years)</div>
-            </div>
-            <p style="font-weight:600; color:var(--primary); margin-bottom:10px;">Naogaon District Construction Workers' Union</p>
-            <ul style="padding-left: 20px; margin-bottom: 15px;">
-                <li>Managed subscription records and reconciled cash books using MS Excel.</li>
-                <li>Conducted regular field auditing and compliance checks across local field units.</li>
-                <li>Handled official documentation, administrative reports, and policy compliance.</li>
+        <div class="card">
+            <h3>Accounts & Field Auditor</h3>
+            <div class="card-meta">Naogaon District Construction Workers' Union | Jan 01, 2018 – Dec 31, 2025 (8 Years)</div>
+            <ul>
+                <li><strong>Fund Management:</strong> Reconciled cash books, daily billing vouchers, and managed subscription records using MS Excel[span_5](start_span)[span_5](end_span)[span_6](start_span)[span_6](end_span).</li>
+                <li><strong>Field Auditing:</strong> Conducted regular compliance checks and audited financial records across local field units[span_7](start_span)[span_7](end_span)[span_8](start_span)[span_8](end_span).</li>
+                <li><strong>Office Admin:</strong> Handled official documentation, drafted policies, managed database, and resolved member queries[span_9](start_span)[span_9](end_span)[span_10](start_span)[span_10](end_span).</li>
             </ul>
-            <a href="https://drive.google.com/drive/folders/1VHACdR4zTriIiqcUDx3fk7CXOR53aJVK" class="btn btn-cert" target="_blank"><i class="fa-solid fa-file-contract"></i> View Experience Certificate</a>
+            <strong>Experience Certificate Copy:</strong>
+            <img src="experience.jpg" alt="Experience Certificate" class="doc-preview">
         </div>
 
-        <!-- Academic Credentials Section -->
+        <!-- 2. Training & Professional Certification (Placed Right After Experience) -->
+        <h2 class="section-title" id="certifications">Training & Certification</h2>
+        <div class="card">
+            <h3>NSDA Level-3 Certified Digital Marketer</h3>
+            <div class="card-meta">Fazlul Haque Technical Training Institute | Assessment Date: 13-06-2026</div>
+            <p>Government-certified professional training covering SEO, SMM, SEM, Office Applications, and Workplace Ethics[span_11](start_span)[span_11](end_span)[span_12](start_span)[span_12](end_span).</p>
+            <strong>Assessment Result Copy:</strong>
+            <img src="nsda.jpg" alt="NSDA Certificate" class="doc-preview">
+        </div>
+
+        <!-- 3. Academic Credentials -->
         <h2 class="section-title" id="education">Academic Credentials</h2>
-        <div class="grid">
-            <!-- MSS -->
-            <div class="card">
-                <div>
-                    <h3>Master of Social Sciences (MSS)</h3>
-                    <p><strong>Subject:</strong> Political Science</p>
-                    <p><strong>Institute:</strong> Naogaon Govt. College</p>
-                    <p>Post-graduate degree with a focus on administrative structures, governance, and organizational management.</p>
-                </div>
-                <a href="https://drive.google.com/drive/folders/1VHACdR4zTriIiqcUDx3fk7CXOR53aJVK" class="btn btn-cert" target="_blank"><i class="fa-solid fa-graduation-cap"></i> View MSS Certificate</a>
-            </div>
-
-            <!-- BA / Degree -->
-            <div class="card">
-                <div>
-                    <h3>Bachelor of Arts (BA) / Degree</h3>
-                    <p><strong>Institute:</strong> National University</p>
-                    <p>Undergraduate degree establishing analytical foundation and critical thinking skills.</p>
-                </div>
-                <a href="https://drive.google.com/drive/folders/1VHACdR4zTriIiqcUDx3fk7CXOR53aJVK" class="btn btn-cert" target="_blank"><i class="fa-solid fa-graduation-cap"></i> View Degree Certificate</a>
-            </div>
-
-            <!-- HSC -->
-            <div class="card">
-                <div>
-                    <h3>Higher Secondary Certificate (HSC)</h3>
-                    <p><strong>Exam Year:</strong> 2013</p>
-                    <p>Higher secondary completion with strong academic performance.</p>
-                </div>
-                <a href="https://drive.google.com/drive/folders/1VHACdR4zTriIiqcUDx3fk7CXOR53aJVK" class="btn btn-cert" target="_blank"><i class="fa-solid fa-certificate"></i> View HSC Certificate</a>
-            </div>
-
-            <!-- SSC -->
-            <div class="card">
-                <div>
-                    <h3>Secondary School Certificate (SSC)</h3>
-                    <p>Secondary education completion foundational for higher studies.</p>
-                </div>
-                <a href="https://drive.google.com/drive/folders/1VHACdR4zTriIiqcUDx3fk7CXOR53aJVK" class="btn btn-cert" target="_blank"><i class="fa-solid fa-certificate"></i> View SSC Certificate</a>
-            </div>
+        
+        <!-- MSS -->
+        <div class="card">
+            <h3>Master of Social Sciences (MSS) in Political Science</h3>
+            <div class="card-meta">Naogaon Government College | Session: 2021-22 | CGPA: 2.69</div>
+            <p>Post-graduate degree with focus on Governance, Geopolitics, and Political Thought[span_13](start_span)[span_13](end_span).</p>
+            <strong>Official Result Sheet Copy:</strong>
+            <img src="mss.jpg" alt="MSS Certificate" class="doc-preview">
         </div>
 
-        <!-- Professional Certifications Section -->
-        <h2 class="section-title" id="certifications">Professional Certifications</h2>
-        <div class="grid">
-            <div class="card">
-                <div>
-                    <h3>NSDA Level-3 Certified Digital Marketer</h3>
-                    <p><strong>Institute:</strong> Fazlul Haque Technical Training Institute</p>
-                    <p>National Skill Development Authority (NSDA) Level-3 certification covering Search Engine Optimization (SEO), Social Media Marketing (SMM), Lead Generation, and Digital Analytics.</p>
-                </div>
-                <a href="https://drive.google.com/drive/folders/1VHACdR4zTriIiqcUDx3fk7CXOR53aJVK" class="btn btn-cert" target="_blank"><i class="fa-solid fa-award"></i> View Training Certificate</a>
-            </div>
+        <!-- BA -->
+        <div class="card">
+            <h3>Bachelor of Arts (BA) Degree Pass Course</h3>
+            <div class="card-meta">Naogaon Government College | Exam Year: 2018 | CGPA: 2.92</div>
+            <p>Undergraduate degree under National University, Bangladesh[span_14](start_span)[span_14](end_span).</p>
+            <strong>Provisional Certificate Copy:</strong>
+            <img src="ba.jpg" alt="BA Certificate" class="doc-preview">
+        </div>
 
-            <div class="card">
-                <div>
-                    <h3>All Official Documents & Certificates</h3>
-                    <p>Access the complete Google Drive repository containing all original academic marksheets, experience letters, and technical certification copies.</p>
-                </div>
-                <a href="https://drive.google.com/drive/folders/1VHACdR4zTriIiqcUDx3fk7CXOR53aJVK" class="btn btn-primary" target="_blank" style="margin-top:15px;"><i class="fa-solid fa-folder-open"></i> Open All Certificates Folder</a>
-            </div>
+        <!-- HSC -->
+        <div class="card">
+            <h3>Higher Secondary Certificate (HSC) - Humanities</h3>
+            <div class="card-meta">Niamatpur College, Naogaon | Exam Year: 2015 | GPA: 3.75</div>
+            <p>Board of Intermediate and Secondary Education, Rajshahi[span_15](start_span)[span_15](end_span).</p>
+            <strong>HSC Certificate Copy:</strong>
+            <img src="hsc.jpg" alt="HSC Certificate" class="doc-preview">
+        </div>
+
+        <!-- SSC -->
+        <div class="card">
+            <h3>Secondary School Certificate (SSC) - Humanities</h3>
+            <div class="card-meta">Niamatpur Bohumukhi High School, Naogaon | Exam Year: 2013 | GPA: 3.88</div>
+            <p>Board of Intermediate and Secondary Education, Rajshahi[span_16](start_span)[span_16](end_span).</p>
+            <strong>SSC Certificate Copy:</strong>
+            <img src="ssc.jpg" alt="SSC Certificate" class="doc-preview">
         </div>
 
     </div>
 
-    <!-- Footer -->
     <footer>
         <p>&copy; 2026 Md. Asaduzzaman Razu (AR Akash). All rights reserved.</p>
     </footer>
 
 </body>
-                </html>
-                    
+</html>
