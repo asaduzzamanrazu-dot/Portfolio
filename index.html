@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Md. Asaduzzaman Razu (AR Akash) - Portfolio</title>
+    <!-- Google Fonts & FontAwesome Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary: #0284c7;
+            --primary-dark: #0369a1;
+            --secondary: #0f172a;
+            --bg-light: #f8fafc;
+            --card-bg: #ffffff;
+            --text-color: #334155;
+            --text-dark: #0f172a;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+        body { background-color: var(--bg-light); color: var(--text-color); line-height: 1.6; }
+
+        /* Navigation Bar */
+        nav { background: var(--secondary); padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .logo { color: #fff; font-size: 1.5rem; font-weight: 700; }
+        .logo span { color: var(--primary); }
+        .nav-links { display: flex; list-style: none; gap: 20px; }
+        .nav-links a { color: #cbd5e1; text-decoration: none; font-weight: 500; transition: 0.3s; }
+        .nav-links a:hover { color: var(--primary); }
+
+        /* Hero Section */
+        .hero { background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); color: white; padding: 80px 5%; text-align: center; }
+        .hero h1 { font-size: 2.8rem; margin-bottom: 10px; font-weight: 700; }
+        .hero h3 { color: var(--primary); font-size: 1.4rem; margin-bottom: 20px; font-weight: 400; }
+        .hero p { max-width: 800px; margin: 0 auto 30px; color: #94a3b8; font-size: 1.05rem; }
+        .contact-info { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-bottom: 30px; }
+        .contact-item { display: flex; align-items: center; gap: 8px; color: #e2e8f0; font-size: 0.95rem; }
+
+        /* Action Buttons */
+        .btn-group { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; }
+        .btn { padding: 12px 28px; border-radius: 6px; text-decoration: none; font-weight: 600; transition: 0.3s; display: inline-flex; align-items: center; gap: 8px; border: none; cursor: pointer; }
+        .btn-primary { background: var(--primary); color: white; }
+        .btn-primary:hover { background: var(--primary-dark); }
+        .btn-outline { border: 2px solid var(--primary); color: var(--primary); background: transparent; }
+        .btn-outline:hover { background: var(--primary); color: white; }
+
+        /* Main Container */
+        .container { max-width: 1100px; margin: 50px auto; padding: 0 20px; }
+        .section-title { font-size: 1.8rem; color: var(--text-dark); margin-bottom: 30px; text-align: center; position: relative; }
+        .section-title::after { content: ''; width: 60px; height: 4px; background: var(--primary); display: block; margin: 8px auto 0; border-radius: 2px; }
+
+        /* Cards Grid */
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; margin-bottom: 50px; }
+        .card { background: var(--card-bg); padding: 30px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); transition: 0.3s; border-top: 4px solid var(--primary); }
+        .card:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0,0,0,0.1); }
+        .card h3 { color: var(--text-dark); margin-bottom: 12px; font-size: 1.25rem; }
+        .card ul { padding-left: 20px; color: var(--text-color); }
+        .card li { margin-bottom: 8px; }
+
+        /* Timeline / Experience */
+        .timeline-item { background: var(--card-bg); padding: 25px; border-radius: 8px; margin-bottom: 20px; box-shadow: 0 2px 10px rgba(0,0,0,0.04); border-left: 4px solid var(--primary); }
+        .timeline-header { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; margin-bottom: 10px; }
+        .timeline-role { font-size: 1.2rem; font-weight: 700; color: var(--text-dark); }
+        .timeline-badge { background: #e0f2fe; color: #0369a1; padding: 4px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; }
+
+        /* Skill Pills */
+        .skills-container { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 15px; }
+        .skill-pill { background: #f1f5f9; color: var(--secondary); padding: 8px 16px; border-radius: 20px; font-weight: 500; font-size: 0.9rem; }
+
+        /* Footer */
+        footer { background: var(--secondary); color: #94a3b8; text-align: center; padding: 25px; margin-top: 60px; font-size: 0.9rem; }
+        footer a { color: var(--primary); text-decoration: none; }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .nav-links { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo">AR <span>AKASH</span></div>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#certifications">Certifications</a></li>
+            <li><a href="#education">Education</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="about">
+        <h1>Md. Asaduzzaman Razu (AR Akash)</h1>
+        <h3>Digital Communication, Operations & Field Audit Specialist</h3>
+        <p>A Master's graduate in Political Science and NSDA Level-03 Certified Digital Marketer with 8 years of solid experience in office administration, financial accounting, and field auditing. Expertise in MS Excel data reporting, SEO, SMM, and field operations.</p>
+        
+        <div class="contact-info">
+            <div class="contact-item"><i class="fa-solid fa-location-dot"></i> Niamotpur, Naogaon</div>
+            <div class="contact-item"><i class="fa-solid fa-phone"></i> 01714390671</div>
+            <div class="contact-item"><i class="fa-solid fa-envelope"></i> asadzzamanrazu@gmail.com</div>
+        </div>
+
+        <div class="btn-group">
+            <a href="https://drive.google.com/open?id=1aC8NOVyUb77z_2HUZOCbny55s-fUGa3j" class="btn btn-primary" target="_blank"><i class="fa-solid fa-download"></i> Download CV (PDF)</a>
+            <a href="https://www.linkedin.com/in/asaduzzaman-razu" class="btn btn-outline" target="_blank"><i class="fa-brands fa-linkedin"></i> LinkedIn Profile</a>
+            <a href="https://drive.google.com/drive/folders/1VHACdR4zTriIiqcUDx3fk7CXOR53aJVK" class="btn btn-outline" target="_blank" style="color:#fff; border-color:#fff;"><i class="fa-solid fa-folder-open"></i> Full Document Drive</a>
+        </div>
+    </section>
+
+    <div class="container">
+
+        <!-- Skills Section -->
+        <h2 class="section-title" id="skills">Core Competencies</h2>
+        <div class="grid">
+            <div class="card">
+                <h3><i class="fa-solid fa-chart-line" style="color:var(--primary)"></i> Digital Marketing</h3>
+                <ul>
+                    <li>Search Engine Optimization (SEO)</li>
+                    <li>Social Media Marketing (SMM)</li>
+                    <li>Lead Generation Strategies</li>
+                    <li>Canva Content & Graphic Design</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3><i class="fa-solid fa-calculator" style="color:var(--primary)"></i> Audit & Operations</h3>
+                <ul>
+                    <li>Financial & Cash Book Auditing</li>
+                    <li>Field Unit Operations Management</li>
+                    <li>Official Portal & Database Maintenance</li>
+                    <li>Program Organization & Administration</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3><i class="fa-solid fa-laptop-code" style="color:var(--primary)"></i> Software & Tools</h3>
+                <ul>
+                    <li>MS Excel (Data Reporting & Tracking)</li>
+                    <li>MS Word & Office Applications</li>
+                    <li>Database Management Tools</li>
+                    <li>Digital Communication Portals</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Work Experience -->
+        <h2 class="section-title" id="experience">Professional Experience</h2>
+        <div class="timeline-item">
+            <div class="timeline-header">
+                <div class="timeline-role">Accounts & Field Auditor</div>
+                <div class="timeline-badge">2018 - 2026 (8 Years)</div>
+            </div>
+            <p style="font-weight:600; color:var(--primary); margin-bottom:10px;">Naogaon District Construction Workers' Union</p>
+            <ul>
+                <li><strong>Fund Management:</strong> Reconciled cash books, daily billing vouchers, and managed member subscription records using MS Excel.</li>
+                <li><strong>Field Auditing:</strong> Conducted regular compliance checks and audited financial records across local field units with high accuracy.</li>
+                <li><strong>Digital Portal Management:</strong> Maintained and updated official member data, digital records, and regular database updates on online portals.</li>
+                <li><strong>Office Administration:</strong> Handled official documentation, policy implementation, member approvals, and query resolutions.</li>
+            </ul>
+        </div>
+
+        <!-- Professional Training & Certifications -->
+        <h2 class="section-title" id="certifications">Training & Certifications</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>NSDA Level-03 Digital Marketer</h3>
+                <p><strong>Fazlul Haque Technical Training Institute (2026)</strong></p>
+                <p style="font-size:0.9rem; margin-top:8px;">Government-certified professional qualification by National Skills Development Authority (NSDA) covering SEO, SMM, SEM, and Office Application skills.</p>
+                <a href="https://drive.google.com/open?id=1-yrxCZbu6Z9b4y9nd3CIxw1ekHg-UwDw" target="_blank" style="display:inline-block; margin-top:12px; color:var(--primary); text-decoration:none; font-weight:600;">View Competency Result Copy &rarr;</a>
+            </div>
+            <div class="card">
+                <h3>Academic & Field Credentials</h3>
+                <p>Verified experience certificates and government ID compliance documents are archived and structured in Google Drive for recruitment audits.</p>
+                <a href="https://drive.google.com/open?id=1VHACdR4zTriIiqcUDx3fk7CXOR53aJVK" target="_blank" style="display:inline-block; margin-top:12px; color:var(--primary); text-decoration:none; font-weight:600;">View Documents Folder &rarr;</a>
+            </div>
+        </div>
+
+        <!-- Academic Background -->
+        <h2 class="section-title" id="education">Educational Qualifications</h2>
+        <div class="timeline-item">
+            <div class="timeline-header">
+                <div class="timeline-role">Master of Social Sciences (MSS) in Political Science</div>
+                <div class="timeline-badge">Session: 2021-22 (Passed 2026)</div>
+            </div>
+            <p><strong>Naogaon Government College (National University)</strong> | CGPA: 2.69</p>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-header">
+                <div class="timeline-role">Bachelor of Arts (BA Pass Course)</div>
+                <div class="timeline-badge">Passed 2018</div>
+            </div>
+            <p><strong>Naogaon Government College (National University)</strong> | CGPA: 2.92</p>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-header">
+                <div class="timeline-role">Higher Secondary Certificate (HSC) - Humanities</div>
+                <div class="timeline-badge">2015</div>
+            </div>
+            <p><strong>Niamatpur College, Naogaon (Rajshahi Board)</strong> | GPA: 3.75</p>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-header">
+                <div class="timeline-role">Secondary School Certificate (SSC) - Humanities</div>
+                <div class="timeline-badge">2013</div>
+            </div>
+            <p><strong>Niamatpur Bohumukhi High School (Rajshahi Board)</strong> | GPA: 3.88</p>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Md. Asaduzzaman Razu (AR Akash). All rights reserved.</p>
+        <p>Built for Professional Recruitment & Digital Portfolio Showcase</p>
+    </footer>
+
+</body>
+</html>
+        <div class="btn-group">
+            <a href="https://drive.google.com/open?id=1aC8NOVyUb77z_2HUZOCbny55s-fUGa3j" class="btn btn-primary" target="_blank"><i class="fa-solid fa-download"></i> Download CV (PDF)</a>
+            <a href="https://www.linkedin.com/in/asaduzzaman-razu" class="btn btn-outline" target="_blank"><i class="fa-brands fa-linkedin"></i> LinkedIn Profile</a>
+            <a href="https://drive.google.com/drive/folders/1VHACdR4zTriIiqcUDx3fk7CXOR53aJVK" class="btn btn-outline" target="_blank" style="color:#fff; border-color:#fff;"><i class="fa-solid fa-folder-open"></i> Full Document Drive</a>
+        </div>
+    </section>
+
+    <div class="container">
+
+        <!-- Skills Section -->
+        <h2 class="section-title" id="skills">Core Competencies</h2>
+        <div class="grid">
+            <div class="card">
+                <h3><i class="fa-solid fa-chart-line" style="color:var(--primary)"></i> Digital Marketing</h3>
+                <ul>
+                    <li>Search Engine Optimization (SEO)</li>
+                    <li>Social Media Marketing (SMM)</li>
+                    <li>Lead Generation Strategies</li>
+                    <li>Canva Content & Graphic Design</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3><i class="fa-solid fa-calculator" style="color:var(--primary)"></i> Audit & Operations</h3>
+                <ul>
+                    <li>Financial & Cash Book Auditing</li>
+                    <li>Field Unit Operations Management</li>
+                    <li>Official Portal & Database Maintenance</li>
+                    <li>Program Organization & Administration</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3><i class="fa-solid fa-laptop-code" style="color:var(--primary)"></i> Software & Tools</h3>
+                <ul>
+                    <li>MS Excel (Data Reporting & Tracking)</li>
+                    <li>MS Word & Office Applications</li>
+                    <li>Database Management Tools</li>
+                    <li>Digital Communication Portals</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Work Experience -->
+        <h2 class="section-title" id="experience">Professional Experience</h2>
+        <div class="timeline-item">
+            <div class="timeline-header">
+                <div class="timeline-role">Accounts & Field Auditor</div>
+                <div class="timeline-badge">2018 - 2026 (8 Years)</div>
+            </div>
+            <p style="font-weight:600; color:var(--primary); margin-bottom:10px;">Naogaon District Construction Workers' Union</p>
+            <ul>
+                <li><strong>Fund Management:</strong> Reconciled cash books, daily billing vouchers, and managed member subscription records using MS Excel.</li>
+                <li><strong>Field Auditing:</strong> Conducted regular compliance checks and audited financial records across local field units with high accuracy.</li>
+                <li><strong>Digital Portal Management:</strong> Maintained and updated official member data, digital records, and regular database updates on online portals.</li>
+                <li><strong>Office Administration:</strong> Handled official documentation, policy implementation, member approvals, and query resolutions.</li>
+            </ul>
+        </div>
+
+        <!-- Professional Training & Certifications -->
+        <h2 class="section-title" id="certifications">Training & Certifications</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>NSDA Level-03 Digital Marketer</h3>
+                <p><strong>Fazlul Haque Technical Training Institute (2026)</strong></p>
+                <p style="font-size:0.9rem; margin-top:8px;">Government-certified professional qualification by National Skills Development Authority (NSDA) covering SEO, SMM, SEM, and Office Application skills.</p>
+                <a href="https://drive.google.com/open?id=1-yrxCZbu6Z9b4y9nd3CIxw1ekHg-UwDw" target="_blank" style="display:inline-block; margin-top:12px; color:var(--primary); text-decoration:none; font-weight:600;">View Competency Result Copy &rarr;</a>
+            </div>
+            <div class="card">
+                <h3>Academic & Field Credentials</h3>
+                <p>Verified experience certificates and government ID compliance documents are archived and structured in Google Drive for recruitment audits.</p>
+                <a href="https://drive.google.com/open?id=1VHACdR4zTriIiqcUDx3fk7CXOR53aJVK" target="_blank" style="display:inline-block; margin-top:12px; color:var(--primary); text-decoration:none; font-weight:600;">View Documents Folder &rarr;</a>
+            </div>
+        </div>
+
+        <!-- Academic Background -->
+        <h2 class="section-title" id="education">Educational Qualifications</h2>
+        <div class="timeline-item">
+            <div class="timeline-header">
+                <div class="timeline-role">Master of Social Sciences (MSS) in Political Science</div>
+                <div class="timeline-badge">Session: 2021-22 (Passed 2026)</div>
+            </div>
+            <p><strong>Naogaon Government College (National University)</strong> | CGPA: 2.69</p>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-header">
+                <div class="timeline-role">Bachelor of Arts (BA Pass Course)</div>
+                <div class="timeline-badge">Passed 2018</div>
+            </div>
+            <p><strong>Naogaon Government College (National University)</strong> | CGPA: 2.92</p>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-header">
+                <div class="timeline-role">Higher Secondary Certificate (HSC) - Humanities</div>
+                <div class="timeline-badge">2015</div>
+            </div>
+            <p><strong>Niamatpur College, Naogaon (Rajshahi Board)</strong> | GPA: 3.75</p>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-header">
+                <div class="timeline-role">Secondary School Certificate (SSC) - Humanities</div>
+                <div class="timeline-badge">2013</div>
+            </div>
+            <p><strong>Niamatpur Bohumukhi High School (Rajshahi Board)</strong> | GPA: 3.88</p>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Md. Asaduzzaman Razu (AR Akash). All rights reserved.</p>
+        <p>Built for Professional Recruitment & Digital Portfolio Showcase</p>
+    </footer>
+
+</body>
+</html>
+
+  
