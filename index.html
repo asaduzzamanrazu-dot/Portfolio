@@ -1,38 +1,35 @@
 <!DOCTYPE html>
-<html lang="bn">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AR Akash - Personal Portfolio</title>
-    <!-- Font Awesome for Icons -->
+    <title>Asaduzzaman Razu (AR Akash) - Portfolio</title>
+    <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
     <style>
-        /* CSS Variables */
         :root {
-            --primary-color: #2563eb;
+            --primary: #2563eb;
             --primary-dark: #1d4ed8;
-            --secondary-color: #0f172a;
-            --accent-color: #10b981;
-            --text-main: #334155;
-            --text-muted: #64748b;
+            --secondary: #0f172a;
+            --accent: #10b981;
             --bg-light: #f8fafc;
-            --bg-white: #ffffff;
-            --whatsapp-color: #25D366;
-            --border-color: #e2e8f0;
-            --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
-            --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
-            --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
+            --card-bg: #ffffff;
+            --text-dark: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --whatsapp: #25D366;
+            --radius: 12px;
             --transition: all 0.3s ease;
         }
 
-        /* Global Reset */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-family: 'Plus Jakarta Sans', sans-serif;
         }
 
         html {
@@ -40,10 +37,10 @@
         }
 
         body {
-            font-family: 'Hind Siliguri', 'Poppins', sans-serif;
-            line-height: 1.6;
-            color: var(--text-main);
             background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.7;
+            overflow-x: hidden;
         }
 
         a {
@@ -51,48 +48,20 @@
             color: inherit;
         }
 
-        ul {
-            list-style: none;
-        }
-
         .container {
-            max-width: 1200px;
+            max-width: 1100px;
             margin: 0 auto;
             padding: 0 20px;
         }
 
-        .section-title {
-            text-align: center;
-            margin-bottom: 50px;
-        }
-
-        .section-title h2 {
-            font-size: 2.2rem;
-            color: var(--secondary-color);
-            position: relative;
-            display: inline-block;
-            padding-bottom: 10px;
-        }
-
-        .section-title h2::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 60px;
-            height: 4px;
-            background: var(--primary-color);
-            border-radius: 2px;
-        }
-
-        /* Navigation Bar */
+        /* Navigation */
         .navbar {
-            background-color: var(--bg-white);
-            box-shadow: var(--shadow-sm);
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
             position: sticky;
             top: 0;
             z-index: 1000;
+            border-bottom: 1px solid var(--border);
         }
 
         .navbar .container {
@@ -103,71 +72,106 @@
         }
 
         .logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--primary-color);
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: var(--secondary);
+            letter-spacing: -0.5px;
         }
 
         .logo span {
-            color: var(--secondary-color);
+            color: var(--primary);
         }
 
         .nav-links {
             display: flex;
             gap: 25px;
+            list-style: none;
         }
 
         .nav-links a {
-            font-weight: 500;
+            font-weight: 600;
+            font-size: 0.95rem;
+            color: var(--text-muted);
             transition: var(--transition);
         }
 
         .nav-links a:hover {
-            color: var(--primary-color);
+            color: var(--primary);
         }
 
-        /* Hero Section */
+        /* Section Titles */
+        .section-title {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .section-title h2 {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--secondary);
+            letter-spacing: -0.5px;
+        }
+
+        .section-title p {
+            color: var(--text-muted);
+            font-size: 1rem;
+            margin-top: 5px;
+        }
+
+        /* Hero Section (No Image Layout) */
         .hero {
-            padding: 80px 0;
-            background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 100%);
+            padding: 90px 0 70px;
+            text-align: center;
+            background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
         }
 
-        .hero-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
+        .hero-badge {
+            display: inline-flex;
             align-items: center;
+            gap: 8px;
+            background-color: #eff6ff;
+            color: var(--primary);
+            padding: 6px 16px;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-bottom: 25px;
+            border: 1px solid #dbeafe;
         }
 
-        .hero-content h3 {
-            color: var(--primary-color);
-            font-size: 1.2rem;
-            font-weight: 600;
-            margin-bottom: 10px;
+        .hero-badge i {
+            font-size: 0.75rem;
         }
 
-        .hero-content h1 {
-            font-size: 2.8rem;
-            color: var(--secondary-color);
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--secondary);
             line-height: 1.2;
             margin-bottom: 15px;
+            letter-spacing: -1px;
         }
 
-        .hero-content h2 {
-            font-size: 1.3rem;
-            color: var(--text-muted);
-            font-weight: 500;
-            margin-bottom: 20px;
+        .hero h2 {
+            font-size: 1.25rem;
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 25px;
+            max-width: 750px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
-        .hero-content p {
+        .hero p {
             font-size: 1.05rem;
-            margin-bottom: 30px;
-            color: var(--text-main);
+            color: var(--text-muted);
+            max-width: 780px;
+            margin: 0 auto 35px;
         }
 
         .hero-btns {
             display: flex;
+            justify-content: center;
             gap: 15px;
             flex-wrap: wrap;
         }
@@ -175,28 +179,20 @@
         .btn {
             display: inline-flex;
             align-items: center;
-            gap: 8px;
-            padding: 12px 28px;
-            border-radius: 6px;
-            font-weight: 600;
+            gap: 10px;
+            padding: 14px 28px;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 0.95rem;
             transition: var(--transition);
-            cursor: pointer;
             border: none;
-        }
-
-        .btn-primary {
-            background-color: var(--primary-color);
-            color: white;
-        }
-
-        .btn-primary:hover {
-            background-color: var(--primary-dark);
-            transform: translateY(-2px);
+            cursor: pointer;
         }
 
         .btn-whatsapp {
-            background-color: var(--whatsapp-color);
-            color: white;
+            background-color: var(--whatsapp);
+            color: #ffffff;
+            box-shadow: 0 4px 14px rgba(37, 211, 102, 0.3);
         }
 
         .btn-whatsapp:hover {
@@ -204,79 +200,100 @@
             transform: translateY(-2px);
         }
 
-        .hero-img {
-            text-align: center;
+        .btn-primary {
+            background-color: var(--primary);
+            color: #ffffff;
+            box-shadow: 0 4px 14px rgba(37, 99, 235, 0.3);
         }
 
-        .hero-img img {
-            width: 320px;
-            height: 320px;
-            object-fit: cover;
-            border-radius: 50%;
-            border: 8px solid var(--bg-white);
-            box-shadow: var(--shadow-lg);
+        .btn-primary:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background-color: #ffffff;
+            color: var(--secondary);
+            border: 1px solid var(--border);
+        }
+
+        .btn-outline:hover {
+            background-color: #f1f5f9;
+            transform: translateY(-2px);
         }
 
         /* About Section */
         .about {
-            padding: 80px 0;
-            background-color: var(--bg-white);
+            padding: 70px 0;
+            background: #ffffff;
         }
 
         .about-card {
-            background-color: var(--bg-light);
+            background: var(--bg-light);
             padding: 40px;
-            border-radius: 12px;
-            box-shadow: var(--shadow-sm);
-            border: 1px solid var(--border-color);
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
         }
 
-        .about-card p {
-            margin-bottom: 20px;
-            font-size: 1.1rem;
-            text-align: justify;
+        .about-text {
+            font-size: 1.05rem;
+            color: var(--text-dark);
+            margin-bottom: 30px;
         }
 
         .info-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
             gap: 20px;
-            margin-top: 30px;
         }
 
         .info-item {
+            background: #ffffff;
+            padding: 18px 20px;
+            border-radius: 10px;
+            border: 1px solid var(--border);
             display: flex;
             align-items: center;
-            gap: 12px;
-            background: var(--bg-white);
-            padding: 15px 20px;
-            border-radius: 8px;
-            box-shadow: var(--shadow-sm);
+            gap: 15px;
         }
 
         .info-item i {
-            font-size: 1.2rem;
-            color: var(--primary-color);
+            font-size: 1.25rem;
+            color: var(--primary);
+            background: #eff6ff;
+            width: 42px;
+            height: 42px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .info-item div span {
+            display: block;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+
+        .info-item div strong {
+            font-size: 0.95rem;
+            color: var(--secondary);
         }
 
         /* Experience Section */
         .experience {
-            padding: 80px 0;
-        }
-
-        .timeline {
-            max-width: 900px;
-            margin: 0 auto;
-            position: relative;
+            padding: 70px 0;
         }
 
         .exp-card {
-            background-color: var(--bg-white);
+            background: #ffffff;
             padding: 35px;
-            border-radius: 12px;
-            box-shadow: var(--shadow-md);
-            border-left: 5px solid var(--primary-color);
-            margin-bottom: 30px;
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            border-top: 4px solid var(--primary);
         }
 
         .exp-header {
@@ -284,187 +301,214 @@
             justify-content: space-between;
             align-items: flex-start;
             flex-wrap: wrap;
-            margin-bottom: 15px;
-            border-bottom: 1px solid var(--border-color);
+            gap: 15px;
+            margin-bottom: 20px;
             padding-bottom: 15px;
+            border-bottom: 1px solid var(--border);
         }
 
         .exp-header h3 {
-            font-size: 1.4rem;
-            color: var(--secondary-color);
+            font-size: 1.35rem;
+            color: var(--secondary);
+            font-weight: 700;
         }
 
         .exp-header h4 {
-            color: var(--primary-color);
-            font-size: 1.1rem;
-            font-weight: 500;
-        }
-
-        .exp-badge {
-            background-color: #eff6ff;
-            color: var(--primary-color);
-            padding: 5px 12px;
-            border-radius: 20px;
-            font-size: 0.9rem;
+            color: var(--primary);
+            font-size: 1.05rem;
             font-weight: 600;
+            margin-top: 4px;
         }
 
-        .exp-list {
-            margin-top: 15px;
+        .exp-period {
+            background-color: #eff6ff;
+            color: var(--primary);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 700;
         }
 
-        .exp-list li {
+        .exp-body ul {
+            list-style: none;
+        }
+
+        .exp-body li {
             position: relative;
-            padding-left: 25px;
-            margin-bottom: 12px;
+            padding-left: 28px;
+            margin-bottom: 14px;
+            color: var(--text-dark);
+            font-size: 1rem;
         }
 
-        .exp-list li::before {
+        .exp-body li::before {
             content: "\f00c";
             font-family: "Font Awesome 6 Free";
             font-weight: 900;
             position: absolute;
             left: 0;
             top: 2px;
-            color: var(--accent-color);
+            color: var(--accent);
             font-size: 0.9rem;
         }
 
-        /* Education & Certification Section */
+        /* Education & Certifications */
         .edu-cert {
-            padding: 80px 0;
-            background-color: var(--bg-white);
+            padding: 70px 0;
+            background: #ffffff;
         }
 
-        .edu-grid {
+        .cards-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
         }
 
-        .edu-card {
-            background-color: var(--bg-light);
+        .card-box {
+            background: var(--bg-light);
             padding: 30px;
-            border-radius: 12px;
-            border: 1px solid var(--border-color);
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
             transition: var(--transition);
         }
 
-        .edu-card:hover {
-            transform: translateY(-50px);
-            box-shadow: var(--shadow-md);
+        .card-box:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
         }
 
-        .edu-icon {
-            width: 50px;
-            height: 50px;
-            background-color: var(--primary-color);
-            color: white;
+        .card-icon {
+            width: 48px;
+            height: 48px;
+            background: var(--primary);
+            color: #ffffff;
             border-radius: 10px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.3rem;
+            font-size: 1.25rem;
             margin-bottom: 20px;
         }
 
-        .edu-card h3 {
-            font-size: 1.25rem;
-            color: var(--secondary-color);
-            margin-bottom: 10px;
+        .card-box h3 {
+            font-size: 1.2rem;
+            color: var(--secondary);
+            font-weight: 700;
+            margin-bottom: 8px;
         }
 
-        .edu-card h4 {
-            color: var(--primary-color);
-            font-size: 1rem;
-            margin-bottom: 10px;
+        .card-box h4 {
+            color: var(--primary);
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin-bottom: 12px;
         }
 
-        .edu-year {
+        .card-badge {
             display: inline-block;
             background: #e2e8f0;
-            padding: 3px 10px;
+            color: var(--text-dark);
+            padding: 4px 10px;
             border-radius: 4px;
-            font-size: 0.85rem;
-            margin-bottom: 15px;
-            font-weight: 600;
+            font-size: 0.8rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .card-box p {
+            font-size: 0.95rem;
+            color: var(--text-muted);
         }
 
         /* Skills Section */
         .skills {
-            padding: 80px 0;
+            padding: 70px 0;
         }
 
         .skills-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
         }
 
-        .skill-group {
-            background: var(--bg-white);
+        .skill-card {
+            background: #ffffff;
             padding: 30px;
-            border-radius: 12px;
-            box-shadow: var(--shadow-sm);
-            border: 1px solid var(--border-color);
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
         }
 
-        .skill-group h3 {
-            font-size: 1.2rem;
-            color: var(--secondary-color);
+        .skill-card h3 {
+            font-size: 1.15rem;
+            color: var(--secondary);
             margin-bottom: 20px;
             display: flex;
             align-items: center;
             gap: 10px;
+            padding-bottom: 12px;
             border-bottom: 2px solid var(--bg-light);
-            padding-bottom: 10px;
         }
 
-        .skill-tags {
+        .skill-card h3 i {
+            color: var(--primary);
+        }
+
+        .tags {
             display: flex;
             flex-wrap: wrap;
             gap: 10px;
         }
 
-        .skill-tag {
+        .tag {
             background-color: var(--bg-light);
-            color: var(--secondary-color);
-            padding: 8px 16px;
+            color: var(--secondary);
+            padding: 8px 14px;
             border-radius: 20px;
-            font-size: 0.95rem;
-            font-weight: 500;
-            border: 1px solid var(--border-color);
+            font-size: 0.85rem;
+            font-weight: 600;
+            border: 1px solid var(--border);
         }
 
         /* Contact Section */
         .contact {
-            padding: 80px 0;
-            background-color: var(--bg-white);
+            padding: 70px 0;
+            background: #ffffff;
         }
 
         .contact-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 20px;
             text-align: center;
         }
 
-        .contact-card {
+        .contact-box {
             background: var(--bg-light);
-            padding: 30px;
-            border-radius: 12px;
-            border: 1px solid var(--border-color);
+            padding: 30px 20px;
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
         }
 
-        .contact-card i {
-            font-size: 2rem;
-            color: var(--primary-color);
+        .contact-box i {
+            font-size: 1.8rem;
+            color: var(--primary);
             margin-bottom: 15px;
         }
 
-        .contact-card h3 {
-            margin-bottom: 10px;
-            color: var(--secondary-color);
+        .contact-box h3 {
+            font-size: 1.1rem;
+            color: var(--secondary);
+            margin-bottom: 8px;
+        }
+
+        .contact-box a, .contact-box p {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        .contact-box a:hover {
+            color: var(--primary);
         }
 
         /* Floating WhatsApp Button */
@@ -472,16 +516,16 @@
             position: fixed;
             bottom: 30px;
             right: 30px;
-            background-color: var(--whatsapp-color);
+            background-color: var(--whatsapp);
             color: white;
-            width: 60px;
-            height: 60px;
+            width: 58px;
+            height: 58px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 30px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            font-size: 28px;
+            box-shadow: 0 6px 16px rgba(37, 211, 102, 0.4);
             z-index: 9999;
             transition: var(--transition);
         }
@@ -493,68 +537,76 @@
 
         /* Footer */
         footer {
-            background-color: var(--secondary-color);
-            color: white;
-            padding: 30px 0;
+            background-color: var(--secondary);
+            color: #94a3b8;
+            padding: 25px 0;
             text-align: center;
+            font-size: 0.9rem;
         }
 
-        /* Responsive Design */
+        /* Responsive Breakpoints */
         @media (max-width: 768px) {
-            .hero-grid {
-                grid-template-columns: 1fr;
-                text-align: center;
+            .hero h1 {
+                font-size: 2.2rem;
             }
-
-            .hero-btns {
-                justify-content: center;
+            
+            .hero h2 {
+                font-size: 1.1rem;
             }
 
             .nav-links {
-                display: none; /* Can be expanded with dynamic JS mobile menu */
+                display: none;
             }
 
-            .hero-content h1 {
-                font-size: 2.2rem;
+            .exp-header {
+                flex-direction: column;
+            }
+
+            .floating-whatsapp {
+                bottom: 20px;
+                right: 20px;
+                width: 50px;
+                height: 50px;
+                font-size: 24px;
             }
         }
     </style>
 </head>
 <body>
 
-    <!-- Header / Navbar -->
+    <!-- Header Navbar -->
     <nav class="navbar">
         <div class="container">
             <div class="logo">AR <span>AKASH</span></div>
             <ul class="nav-links">
-                <li><a href="#about">পরিচিতি</a></li>
-                <li><a href="#experience">অভিজ্ঞতা</a></li>
-                <li><a href="#education">শিক্ষা ও সনদ</a></li>
-                <li><a href="#skills">দক্ষতা</a></li>
-                <li><a href="#contact">যোগাযোগ</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
     </nav>
 
     <!-- Hero Section -->
     <section class="hero">
-        <div class="container hero-grid">
-            <div class="hero-content">
-                <h3>স্বাগতম, আমি</h3>
-                <h1>আছাদুজ্জামান রাজু (এ আর আকাশ)</h1>
-                <h2>ডিজিটাল কমিউনিকেশন ও ফিল্ড অপারেশনস স্পেশালিস্ট | অ্যাকাউন্টেবিলিটি ও অডিট এক্সপার্ট</h2>
-                <p>আমার ৮ বছরের বাস্তব অফিস অ্যাডমিনিস্ট্রেশন, ফিল্ড অডিটিং এবং সরকারি এনএসডিএ (NSDA) লেভেল-৩ সার্টিফাইড ডিজিটাল মার্কেটিংয়ের অভিজ্ঞতার মাধ্যমে এনজিও এবং প্রাতিষ্ঠানিক ক্ষেত্রে সর্বোচ্চ অবদান রাখতে প্রস্তুত।</p>
-                <div class="hero-btns">
-                    <a href="https://wa.me/8801714390671" target="_blank" class="btn btn-whatsapp">
-                        <i class="fa-brands fa-whatsapp"></i> হোয়াটসঅ্যাপে মেসেজ দিন
-                    </a>
-                    <a href="#contact" class="btn btn-primary">
-                        <i class="fa-solid fa-envelope"></i> যোগাযোগ করুন
-                    </a>
-                </div>
+        <div class="container">
+            <div class="hero-badge">
+                <i class="fa-solid fa-circle"></i> Available for NGO & Operations Roles
             </div>
-            <div class="hero-img">
-                <img src="https://via.placeholder.com/320" alt="Asaduzzaman Razu (AR Akash)">
+            <h1>Asaduzzaman Razu</h1>
+            <h2>Digital Communication & Field Operations Specialist | Accounts & Field Auditor</h2>
+            <p>Master's graduate in Political Science and NSDA Level-3 Certified Digital Marketer with 8 years of solid professional experience in office administration, fund management, and field auditing. Seeking opportunities to drive operational excellence in the NGO and development sectors.</p>
+            <div class="hero-btns">
+                <a href="https://wa.me/8801714390671" target="_blank" class="btn btn-whatsapp">
+                    <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
+                </a>
+                <a href="#contact" class="btn btn-primary">
+                    <i class="fa-solid fa-envelope"></i> Contact Me
+                </a>
+                <a href="https://linkedin.com/in/asaduzzaman-razu" target="_blank" class="btn btn-outline">
+                    <i class="fa-brands fa-linkedin"></i> LinkedIn Profile
+                </a>
             </div>
         </div>
     </section>
@@ -563,28 +615,40 @@
     <section id="about" class="about">
         <div class="container">
             <div class="section-title">
-                <h2>আমার সম্পর্কে</h2>
+                <h2>About Me</h2>
+                <p>Professional background and core qualifications</p>
             </div>
             <div class="about-card">
-                <p>আমি রাজনৈতিক বিজ্ঞানে স্নাতকোত্তর (MSS) ডিগ্রিধারী এবং এনএসডিএ (NSDA) লেভেল-৩ স্বীকৃত সার্টিফাইড ডিজিটাল মার্কেটার[span_0](start_span)[span_0](end_span)। বিগত ৮ বছর ধরে (২০১৮-২০২৫) নওগাঁ জেলা ইমারত নির্মাণ শ্রমিক ইউনিয়নে সফলতার সাথে "অ্যাকাউন্টস অ্যান্ড ফিল্ড অডিটর" হিসেবে দায়িত্ব পালন করেছি[span_1](start_span)[span_1](end_span)। এ সময় আমি নিয়মিত অর্থ ব্যবস্থাপনা, ক্যাশ বুক ক্যাশ রিকনসিলিয়েশন, ফিল্ড অডিট, ডাটা এন্ট্রি ও প্রাতিষ্ঠানিক পলিসি ও ডকুমেন্টেশনের দায়িত্ব সামলেছি[span_2](start_span)[span_2](end_span)[span_3](start_span)[span_3](end_span)।</p>
-                <p>আমার দীর্ঘদিনের মাঠ পর্যায়ের অপারেশনাল অভিজ্ঞতা, পেশাদার অফিস অ্যাডমিনিস্ট্রেশন দক্ষতা এবং আধুনিক ডিজিটাল মার্কেটিং ও আইসিটি জ্ঞানের সমন্বয়ে আমি উন্নয়নমূলক সংস্থা (NGO) ও প্রগতিশীল প্রতিষ্ঠানের ফিল্ড অপারেশনস, ডেটা প্রসেসিং ও ডিজিটাল নেটওয়ার্কিং পরিচালনায় সক্ষম[span_4](start_span)[span_4](end_span) ।</p>
-                
+                <div class="about-text">
+                    I am a Master's graduate in Political Science (MSS) and a government-certified Digital Marketer (NSDA Level-3). With 8 years of proven field experience (2018–2025) as an Accounts & Field Auditor at the Naogaon District Construction Workers' Union, I specialize in internal fund management, field compliance auditing, official documentation, and database management. My dual background in administrative operations and modern digital marketing equips me to effectively streamline field operations and communications in dynamic organization environments.
+                </div>
                 <div class="info-grid">
                     <div class="info-item">
                         <i class="fa-solid fa-user"></i>
-                        <div><strong>পূর্ণ নাম:</strong> মোঃ আছাদুজ্জামান রাজু (এ আর আকাশ)[span_5](start_span)[span_5](end_span)[span_6](start_span)[span_6](end_span)</div>
+                        <div>
+                            <span>Full Name</span>
+                            <strong>Asaduzzaman Razu (AR Akash)</strong>
+                        </div>
                     </div>
                     <div class="info-item">
                         <i class="fa-solid fa-graduation-cap"></i>
-                        <div><strong>শিক্ষা:</strong> স্নাতকোত্তর (MSS) - রাষ্ট্রবিজ্ঞান[span_7](start_span)[span_7](end_span)</div>
+                        <div>
+                            <span>Degree</span>
+                            <strong>MSS in Political Science</strong>
+                        </div>
                     </div>
                     <div class="info-item">
                         <i class="fa-solid fa-certificate"></i>
-                        <div><strong>সার্টিফাইড:</strong> NSDA Digital Marketing Level-3[span_8](start_span)[span_8](end_span)[span_9](start_span)[span_9](end_span)</div>
+                        <div><span>Certification</span>
+                            <strong>NSDA Digital Marketing L3</strong>
+                        </div>
                     </div>
                     <div class="info-item">
                         <i class="fa-solid fa-location-dot"></i>
-                        <div><strong>ঠিকানা:</strong> নিয়ামতপুর, নওগাঁ, বাংলাদেশ[span_10](start_span)[span_10](end_span)</div>
+                        <div>
+                            <span>Location</span>
+                            <strong>Naogaon, Bangladesh</strong>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -595,36 +659,21 @@
     <section id="experience" class="experience">
         <div class="container">
             <div class="section-title">
-                <h2>পেশাগত অভিজ্ঞতা</h2>
+                <h2>Professional Experience</h2>
+                <p>8 years of administrative and operational track record</p>
             </div>
-            <div class="timeline">
-                <div class="exp-card">
-                    <div class="exp-header">
-                        <div>
-                            <h3>অ্যাকাউন্টস অ্যান্ড ফিল্ড অডিটর (Accounts & Field Auditor)[span_11](start_span)[span_11](end_span)[span_12](start_span)[span_12](end_span)</h3>
-                            <h4>নওগাঁ জেলা ইমারত নির্মাণ শ্রমিক ইউনিয়ন[span_13](start_span)[span_13](end_span)[span_14](start_span)[span_14](end_span)</h4>
-                        </div>
-                        <span class="exp-badge">২০১৮ - ২০২৫ (৮ বছর)[span_15](start_span)[span_15](end_span)[span_16](start_span)[span_16](end_span)</span>
+            <div class="exp-card">
+                <div class="exp-header">
+                    <div>
+                        <h3>Accounts & Field Auditor</h3>
+                        <h4>Naogaon District Construction Workers' Union</h4>
                     </div>
-                    <ul class="exp-list">
-                        <li><strong>অর্থ ও ফান্ড ব্যবস্থাপনা:</strong> অভ্যন্তরীণ ক্যাশ বুক, আয়-ব্যয়ের হিসাব, বিল-ভাউচার এবং সদস্য চাঁদা আদায়ের সঠিক হিসাব এমএস এক্সেলের (MS Excel) মাধ্যমে প্রস্তুত ও পরিচালনা[span_17](start_span)[span_17](end_span)[span_18](start_span)[span_18](end_span)।</li>
-                        <li><strong>ফিল্ড অডিট ও কমপ্লায়েন্স:</strong> মাঠ পর্যায়ের ফিল্ড ইউনিটগুলোর আর্থিক স্বচ্ছতা নিশ্চিতকরণে নিয়মিত কমপ্লায়েন্স চেক ও অডিট সম্পাদন[span_19](start_span)[span_19](end_span)[span_20](start_span)[span_20](end_span)।</li>
-                        <li><strong>অফিস অ্যাডমিনিস্ট্রেশন:</strong> অফিসিয়াল ডকুমেন্টেশন প্রস্তুত, নতুন সদস্য ভর্তি, আইডি কার্ড আপডেট, নীতিমালা খসড়া এবং সদস্যদের অভিযোগ নিস্পতি করা[span_21](start_span)[span_21](end_span)[span_22](start_span)[span_22](end_span)।</li>
-                        <li><strong>পোর্টাল ও ডাটাবেজ পরিচালনা:</strong> ইউনিয়ন অফিশিয়াল অনলাইন পোর্টাল পরিচালনা এবং সদস্যদের ডিজিটাল ডাটাবেজ তৈরি ও নিয়মিত হালনাগাদকরণ[span_23](start_span)[span_23](end_span)।</li>
-                    </ul>
+                    <span class="exp-period">2018 – 2025 (8 Years)</span>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Education & Certifications -->
-    <section id="education" class="edu-cert">
-        <div class="container">
-            <div class="section-title">
-                <h2>শিক্ষা ও পেশাদার প্রশিক্ষণ</h2>
-            </div>
-            <div class="edu-grid">
-                <!-- Master Degree -->
-                <div class="edu-card">
-                    <div class="edu-icon"><i class="fa-solid fa-graduation-cap"></i></div>
-                    <span class="edu-year">সেশন: ২০২১ - ২০২২ (উত্তীর্ণ: ২০২৬)[span_24](start_span)[s
+                <div class="exp-body">
+                    <ul>
+                        <li><strong>Fund & Cash Book Management:</strong> Managed subscription records, reconciled internal cash books, and verified financial vouchers accurately using MS Excel.</li>
+                        <li><strong>Field Compliance Auditing:</strong> Conducted routine field unit visits and financial audits to maintain transparency across local operational units.</li>
+                        <li><strong>Office Administration:</strong> Handled official correspondence, member approvals, documentation drafting, and resolved member queries efficiently.</li>
+                        <li><strong>Database & Portal Management:</strong> Maintained official web portals and managed digital registration databases for organization members.</li>
+                    </ul>
