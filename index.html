@@ -1,657 +1,298 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bn">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Md. Asaduzzaman Razu (AR Akash) - Professional Portfolio</title>
-    <!-- Font Awesome Icons -->
+    <title>AR Akash - Portfolio</title>
+    <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --primary: #2563eb;
-            --primary-dark: #1d4ed8;
-            --secondary: #0f172a;
-            --accent: #10b981;
-            --bg-light: #f8fafc;
-            --card-bg: #ffffff;
-            --text-dark: #1e293b;
-            --text-muted: #64748b;
-            --border: #cbd5e1;
-            --whatsapp: #25D366;
-            --facebook: #1877F2;
-            --linkedin: #0a66c2;
-            --radius: 12px;
-            --transition: all 0.3s ease;
-        }
-
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-family: 'Poppins', sans-serif;
         }
-
-        html { scroll-behavior: smooth; }
 
         body {
-            background-color: var(--bg-light);
-            color: var(--text-dark);
-            line-height: 1.7;
-            overflow-x: hidden;
-        }
-
-        a { text-decoration: none; color: inherit; }
-
-        .container {
-            width: 100%;
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* Navigation Bar */
-        .navbar {
-            background: rgba(255, 255, 255, 0.98);
-            backdrop-filter: blur(10px);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            border-bottom: 1px solid var(--border);
-        }
-
-        .navbar .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            height: 70px;
-        }
-
-        .logo {
-            font-size: 1.4rem;
-            font-weight: 800;
-            color: var(--secondary);
-            letter-spacing: -0.5px;
-        }
-
-        .logo span { color: var(--primary); }
-
-        .nav-links {
-            display: flex;
-            gap: 20px;
-            list-style: none;
-        }
-
-        .nav-links a {
-            font-weight: 600;
-            font-size: 0.95rem;
-            color: var(--text-muted);
-            transition: var(--transition);
-        }
-
-        .nav-links a:hover { color: var(--primary); }
-
-        /* Section Styling */
-        .section-title {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-
-        .section-title h2 {
-            font-size: 2rem;
-            font-weight: 800;
-            color: var(--secondary);
-            letter-spacing: -0.5px;
-        }
-
-        .section-title p {
-            color: var(--text-muted);
-            font-size: 1rem;
-            margin-top: 5px;
-        }
-
-        /* Hero Section */
-        .hero {
-            padding: 60px 0 50px;
-            text-align: center;
-            background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
-        }
-
-        .hero-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background-color: #eff6ff;
-            color: var(--primary);
-            padding: 8px 18px;
-            border-radius: 30px;
-            font-size: 0.88rem;
-            font-weight: 700;
-            margin-bottom: 20px;
-            border: 1px solid #dbeafe;
-        }
-
-        .hero h1 {
-            font-size: 2.5rem;
-            font-weight: 800;
-            color: var(--secondary);
-            line-height: 1.25;
-            margin-bottom: 12px;
-            letter-spacing: -0.5px;
-        }
-
-        .hero h2 {
-            font-size: 1.25rem;
-            color: var(--primary);
-            font-weight: 700;
-            margin-bottom: 20px;
-            max-width: 850px;
-            margin-left: auto;
-            margin-right: auto;
-            line-height: 1.5;
-        }
-
-        .hero p {
-            font-size: 1.05rem;
-            color: var(--text-dark);
-            max-width: 850px;
-            margin: 0 auto 30px;
-            text-align: justify;
-        }
-
-        /* Contact Action Buttons Grid */
-        .hero-btns {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            flex-wrap: wrap;
-            margin-top: 25px;
-        }
-
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            padding: 14px 26px;
-            border-radius: 10px;
-            font-weight: 700;
-            font-size: 0.95rem;
-            transition: var(--transition);
-            border: none;
-            cursor: pointer;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-        }
-
-        .btn-whatsapp { background-color: var(--whatsapp); color: #ffffff; }
-        .btn-whatsapp:hover { background-color: #1eb954; transform: translateY(-2px); }
-
-        .btn-linkedin { background-color: var(--linkedin); color: #ffffff; }
-        .btn-linkedin:hover { background-color: #084e96; transform: translateY(-2px); }
-
-        .btn-facebook { background-color: var(--facebook); color: #ffffff; }
-        .btn-facebook:hover { background-color: #0d65d9; transform: translateY(-2px); }
-
-        .btn-email { background-color: var(--primary); color: #ffffff; }
-        .btn-email:hover { background-color: var(--primary-dark); transform: translateY(-2px); }
-
-        /* Executive Target Roles Banner */
-        .target-roles {
-            background: #ffffff;
-            border: 2px solid #e2e8f0;
-            border-radius: var(--radius);
-            padding: 28px;
-            margin: 40px 0;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
-        }
-
-        .target-roles h3 {
-            font-size: 1.3rem;
-            color: var(--secondary);
-            margin-bottom: 18px;
-            text-align: center;
-            font-weight: 800;
-        }
-
-        .roles-grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-            justify-content: center;
-        }
-
-        .role-badge {
-            background-color: #f1f5f9;
-            color: var(--secondary);
-            padding: 10px 18px;
-            border-radius: 8px;
-            font-weight: 700;
-            font-size: 0.9rem;
-            border: 1px solid var(--border);
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .role-badge i { color: var(--primary); }
-
-        /* About Section */
-        .about { padding: 50px 0; background: #ffffff; }
-
-        .about-card {
-            background: var(--bg-light);
-            padding: 35px;
-            border-radius: var(--radius);
-            border: 1px solid var(--border);
-        }
-
-        .about-text {
-            font-size: 1.05rem;
-            color: var(--text-dark);
-            margin-bottom: 30px;
-            line-height: 1.8;
-            text-align: justify;
-        }
-
-        .info-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 15px;
-        }
-
-        .info-item {
-            background: #ffffff;
-            padding: 16px 18px;
-            border-radius: 10px;
-            border: 1px solid var(--border);
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-
-        .info-item i {
-            font-size: 1.2rem;
-            color: var(--primary);
-            background: #eff6ff;
-            width: 44px;
-            height: 44px;
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-        }
-
-        .info-item div span {
-            display: block;
-            font-size: 0.75rem;
-            color: var(--text-muted);
-            text-transform: uppercase;
-            font-weight: 700;
-        }
-
-        .info-item div strong {
-            font-size: 0.95rem;
-            color: var(--secondary);
-        }
-
-        /* Work Experience Section */
-        .experience { padding: 50px 0; }
-
-        .exp-card {
-            background: #ffffff;
-            padding: 35px;
-            border-radius: var(--radius);
-            border: 1px solid var(--border);
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-            border-top: 5px solid var(--primary);
-        }
-
-        .exp-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            flex-wrap: wrap;
-            gap: 15px;
-            margin-bottom: 20px;
-            padding-bottom: 15px;
-            border-bottom: 1px solid var(--border);
-        }
-
-        .exp-header h3 {
-            font-size: 1.4rem;
-            color: var(--secondary);
-            font-weight: 800;
-        }
-
-        .exp-header h4 {
-            color: var(--primary);
-            font-size: 1.05rem;
-            font-weight: 700;
-            margin-top: 4px;
-        }
-
-        .exp-period {
-            background-color: #eff6ff;
-            color: var(--primary);
-            padding: 6px 14px;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: 700;
-            border: 1px solid #dbeafe;
-        }
-
-        .exp-body ul { list-style: none; }
-
-        .exp-body li {
-            position: relative;
-            padding-left: 28px;
-            margin-bottom: 16px;
-            color: var(--text-dark);
-            font-size: 1rem;
+            background-color: #f4f7f6;
+            color: #333;
             line-height: 1.6;
         }
 
-        .exp-body li::before {
-            content: "\f00c";
-            font-family: "Font Awesome 6 Free";
-            font-weight: 900;
-            position: absolute;
-            left: 0;
-            top: 2px;
-            color: var(--accent);
-            font-size: 0.95rem;
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
         }
 
-        /* Education & Certifications Section */
-        .edu-cert { padding: 50px 0; background: #ffffff; }
+        /* Header Section */
+        header {
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
 
-        .cards-grid {
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 4px solid #fff;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+
+        header h1 {
+            font-size: 2.2rem;
+            margin-bottom: 5px;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        /* Direct Contact Action Buttons */
+        .cta-buttons {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 30px 0;
         }
 
-        .card-box {
-            background: var(--bg-light);
-            padding: 25px;
-            border-radius: var(--radius);
-            border: 1px solid var(--border);
-            transition: var(--transition);
-        }
-
-        .card-box:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.08);
-        }
-
-        .card-icon {
-            width: 44px;
-            height: 44px;
-            background: var(--primary);
-            color: #ffffff;
-            border-radius: 10px;
+        .btn {
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.2rem;
-            margin-bottom: 18px;
+            gap: 10px;
+            padding: 15px 20px;
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            border-radius: 8px;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
 
-        .card-box h3 {
-            font-size: 1.15rem;
-            color: var(--secondary);
-            font-weight: 800;
-            margin-bottom: 6px;
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
         }
 
-        .card-box h4 {
-            color: var(--primary);
-            font-size: 0.95rem;
-            font-weight: 700;
-            margin-bottom: 10px;
-        }
+        .btn-whatsapp { background-color: #25D366; }
+        .btn-linkedin { background-color: #0A66C2; }
+        .btn-facebook { background-color: #1877F2; }
+        .btn-email { background-color: #EA4335; }
 
-        .card-badge {
-            display: inline-block;
-            background: #e2e8f0;
-            color: var(--text-dark);
-            padding: 4px 10px;
-            border-radius: 4px;
-            font-size: 0.8rem;
-            font-weight: 700;
-            margin-bottom: 10px;
-        }
-
-        .card-box p {
-            font-size: 0.92rem;
-            color: var(--text-muted);
-        }
-
-        /* Skills Section */
-        .skills { padding: 50px 0; }
-
-        .skills-grid {
+        /* Grid Layout for Main Content */
+        .main-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
+            grid-template-columns: 2fr 1fr;
+            gap: 20px;
         }
 
-        .skill-card {
-            background: #ffffff;
-            padding: 30px;
-            border-radius: var(--radius);
-            border: 1px solid var(--border);
+        @media (max-width: 768px) {
+            .main-grid {
+                grid-template-columns: 1fr;
+            }
         }
 
-        .skill-card h3 {
-            font-size: 1.15rem;
-            color: var(--secondary);
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
             margin-bottom: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .card h2 {
+            color: #1e3c72;
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+            font-size: 1.4rem;
             display: flex;
             align-items: center;
             gap: 10px;
-            padding-bottom: 12px;
-            border-bottom: 2px solid var(--bg-light);
-            font-weight: 800;
         }
 
-        .skill-card h3 i { color: var(--primary); }
+        .timeline-item {
+            margin-bottom: 20px;
+            border-left: 3px solid #1e3c72;
+            padding-left: 15px;
+        }
 
-        .tags {
+        .timeline-item h3 {
+            font-size: 1.1rem;
+            color: #222;
+        }
+
+        .timeline-item .duration {
+            font-size: 0.85rem;
+            color: #777;
+            margin-bottom: 5px;
+        }
+
+        .timeline-item ul {
+            margin-left: 20px;
+            margin-top: 5px;
+        }
+
+        /* Skills Tags */
+        .skills-container {
             display: flex;
             flex-wrap: wrap;
             gap: 10px;
         }
 
-        .tag {
-            background-color: var(--bg-light);
-            color: var(--secondary);
+        .skill-tag {
+            background: #eef2f5;
+            color: #1e3c72;
             padding: 8px 14px;
             border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: 700;
-            border: 1px solid var(--border);
-        }
-
-        /* Contact Section */
-        .contact { padding: 50px 0; background: #ffffff; }
-
-        .contact-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 20px;
-            text-align: center;
-        }
-
-        .contact-box {
-            background: var(--bg-light);
-            padding: 30px 20px;
-            border-radius: var(--radius);
-            border: 1px solid var(--border);
-        }
-
-        .contact-box i {
-            font-size: 2rem;
-            color: var(--primary);
-            margin-bottom: 15px;
-        }
-
-        .contact-box h3 {
-            font-size: 1.1rem;
-            color: var(--secondary);
-            margin-bottom: 8px;
-            font-weight: 800;
-        }
-
-        .contact-box a, .contact-box p {
-            font-size: 0.95rem;
-            color: var(--text-muted);
+            font-size: 0.9rem;
             font-weight: 600;
-        }
-
-        .contact-box a:hover { color: var(--primary); }
-
-        /* Thank You Section */
-        .thank-you-section {
-            padding: 60px 0;
-            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-            color: #ffffff;
-            text-align: center;
-        }
-
-        .thank-you-card {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .thank-you-card i {
-            font-size: 2.5rem;
-            color: var(--accent);
-            margin-bottom: 15px;
-        }
-
-        .thank-you-card h2 {
-            font-size: 2rem;
-            font-weight: 800;
-            margin-bottom: 15px;
-            letter-spacing: -0.5px;
-        }
-
-        .thank-you-card p {
-            font-size: 1.05rem;
-            color: #94a3b8;
-            margin-bottom: 30px;
-            line-height: 1.8;
-            text-align: justify;
-        }
-
-        /* Floating WhatsApp Button */
-        .floating-whatsapp {
-            position: fixed;
-            bottom: 30px;
-            right: 25px;
-            background-color: var(--whatsapp);
-            color: white;
-            width: 58px;
-            height: 58px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 28px;
-            box-shadow: 0 6px 16px rgba(37, 211, 102, 0.4);
-            z-index: 9999;
-            transition: var(--transition);
-        }
-
-        .floating-whatsapp:hover {
-            transform: scale(1.1);
-            color: white;
         }
 
         /* Footer */
         footer {
-            background-color: #0b0f19;
-            color: #64748b;
-            padding: 25px 0;
             text-align: center;
+            padding: 20px;
+            color: #666;
             font-size: 0.9rem;
-            border-top: 1px solid #1e293b;
-        }
-
-        /* Responsive Breakpoints (Mobile & Tablet) */
-        @media (max-width: 768px) {
-            .nav-links { display: none; }
-            .hero h1 { font-size: 1.85rem; text-align: left; }
-            .hero h2 { font-size: 1.05rem; text-align: left; }
-            .hero p { text-align: left; font-size: 0.95rem; }
-            .hero-btns { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; width: 100%; }
-            .btn { width: 100%; padding: 12px 10px; font-size: 0.85rem; }
-            .roles-grid { justify-content: flex-start; }
-            .role-badge { font-size: 0.82rem; width: 100%; }
-            .about-card { padding: 20px; }
-            .about-text { text-align: left; font-size: 0.95rem; }
-            .exp-card { padding: 20px; }
-            .exp-header h3 { font-size: 1.2rem; }
-            .exp-body li { font-size: 0.92rem; text-align: left; }
-            .thank-you-card p { text-align: left; font-size: 0.95rem; }
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
 
-    <!-- Header Navigation -->
-    <nav class="navbar">
-        <div class="container">
-            <div class="logo">AR <span>AKASH</span></div>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#roles">Target Roles</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
+<div class="container">
+    <!-- Header Section -->
+    <header>
+        <!-- ছবি সেট করার সময় image.jpg তুলে আপনার ছবির লিঙ্ক বা পাথ দিন -->
+        <img src="https://via.placeholder.com/150" alt="Asaduzzaman Razu" class="profile-img">
+        <h1>Asaduzzaman Razu (AR Akash)</h1>
+        <p>Digital Communication & Field Operations Specialist</p>
+        <p style="font-size: 0.9rem; margin-top: 5px;"><i class="fa-solid fa-location-dot"></i> Niamotpur, Naogaon, Bangladesh</p>
+    </header>
 
-    <!-- Hero / Header Intro Section -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero-badge">
-                <i class="fa-solid fa-briefcase"></i> Open for High-Level Administrative & Field Roles
+    <!-- Quick Contact Buttons -->
+    <div class="cta-buttons">
+        <!-- WhatsApp: Replace 8801714390671 with your phone number -->
+        <a href="https://wa.me/8801714390671" target="_blank" class="btn btn-whatsapp">
+            <i class="fa-brands fa-whatsapp fa-xl"></i> WhatsApp Me
+        </a>
+        <!-- LinkedIn Link -->
+        <a href="https://linkedin.com/in/asaduzzaman-razu" target="_blank" class="btn btn-linkedin">
+            <i class="fa-brands fa-linkedin fa-xl"></i> LinkedIn Profile
+        </a>
+        <!-- Facebook Link -->
+        <a href="https://facebook.com" target="_blank" class="btn btn-facebook">
+            <i class="fa-brands fa-facebook fa-xl"></i> Facebook
+        </a>
+        <!-- Email Link -->
+        <a href="mailto:asadzzamanrazu@gmail.com" class="btn btn-email">
+            <i class="fa-solid fa-envelope fa-xl"></i> Send Email
+        </a>
+    </div>
+
+    <!-- Main Content Layout -->
+    <div class="main-grid">
+        
+        <!-- Left Column (Primary Details) -->
+        <div>
+            <!-- About Me -->
+            <div class="card">
+                <h2><i class="fa-solid fa-user"></i> Professional Summary</h2>
+                <p>
+                    A Master's graduate in Political Science and NSDA Level-03 Certified Digital Marketer with 8 years of solid experience in office administration, accounting, and field auditing. Skilled in MS Excel for data tracking, field operations, and client communication. Seeking an opportunity to leverage dual expertise in administration and operations within the NGO or Corporate sector.
+                </p>
             </div>
-            <h1>Md. Asaduzzaman Razu (AR Akash)</h1>
-            <h2>Digital Communication & Field Operations Specialist | Audit & Governance Professional</h2>
-            <p>A Master's graduate in Political Science[span_0](start_span)[span_0](end_span)[span_1](start_span)[span_1](end_span) and NSDA Level-3 Certified Digital Marketer[span_2](start_span)[span_2](end_span)[span_3](start_span)[span_3](end_span) with 8 years of solid hands-on experience in office administration, financial accounting, and field auditing[span_4](start_span)[span_4](end_span)[span_5](start_span)[span_5](end_span). Skilled in MS Excel for data tracking, field operations, policy enforcement, and multi-stakeholder communication[span_6](start_span)[span_6](end_span)[span_7](start_span)[span_7](end_span). Seeking executive career positions in NGOs and corporate entities to drive field governance, compliance monitoring, and program success[span_8](start_span)[span_8](end_span).</p>
-            
-            <!-- Quick Contact Links Grid -->
-            <div class="hero-btns">
-                <a href="https://wa.me/8801714390671" target="_blank" class="btn btn-whatsapp">
-                    <i class="fa-brands fa-whatsapp"></i> WhatsApp
-                </a>
-                <a href="https://linkedin.com/in/asaduzzaman-razu" target="_blank" class="btn btn-linkedin">
-                    <i class="fa-brands fa-linkedin"></i> LinkedIn
-                </a>
-                <a href="https://facebook.com/arakash.me" target="_blank" class="btn btn-facebook">
-                    <i class="fa-brands fa-facebook"></i> Facebook
-                </a>
-                <a href="mailto:asadzzamanrazu@gmail.com" class="btn btn-email">
-                    <i class="fa-solid fa-envelope"></i> Email Me
-                </a>
+
+            <!-- Experience -->
+            <div class="card">
+                <h2><i class="fa-solid fa-briefcase"></i> Work Experience</h2>
+                
+                <div class="timeline-item">
+                    <h3>Accounts & Field Auditor</h3>
+                    <div class="duration">Naogaon District Construction Workers' Union | 2018 - 2026 (8 Years)</div>
+                    <ul>
+                        <li><strong>Fund Management:</strong> Reconciled cash books, financial statements, and managed subscription records using MS Excel.</li>
+                        <li><strong>Field Auditing:</strong> Conducted regular compliance checks and audited financial records across local field units.</li>
+                        <li><strong>Database & Portal:</strong> Operated online official portals, updated digital member database, and prepared activity reports.</li>
+                        <li><strong>Office Administration:</strong> Handled official documentation, drafted organizational policies, and resolved member queries.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Education -->
+            <div class="card">
+                <h2><i class="fa-solid fa-graduation-cap"></i> Academic Education</h2>
+                
+                <div class="timeline-item">
+                    <h3>Master of Social Sciences (MSS) in Political Science</h3>
+                    <div class="duration">Naogaon Government College | Session: 2021-22 (Completed 2026)</div>
+                </div>
+
+                <div class="timeline-item">
+                    <h3>Bachelor of Arts (BA) Degree Pass Course</h3>
+                    <div class="duration">Naogaon Government College | Passing Year: 2018</div>
+                </div>
             </div>
         </div>
-    </section>
 
-    <!-- Targeted Executive Roles Section -->
-    <section id="roles" class="container">
-        <div class="target-roles">
-            <h3><i class="fa-solid fa-crosshairs"></i> Targeted Leadership & Senior Positions</h3>
-            <div class="roles-grid">
-                <span class="role-badge"><i class="fa-solid fa-check-circle"></i> Program Officer</span>
-                <span class="role-badge"><i class="fa-solid fa-check-circle"></i> Audit Visit Specialist / Lead</span>
-                <span class="role-badge"><i class="fa-solid fa-check-circle"></i> Field Operations Manager</span>
-          
+        <!-- Right Column (Skills & Certifications) -->
+        <div>
+            <!-- Certifications -->
+            <div class="card">
+                <h2><i class="fa-solid fa-certificate"></i> Certification</h2>
+                <h3>NSDA Level-3 Certified Digital Marketer (2026)</h3>
+                <p style="font-size: 0.9rem; color: #555; margin-top: 5px;">
+                    Fazlull Haque Technical Training Institute
+                </p>
+                <p style="font-size: 0.85rem; color: #777;">
+                    Government-certified professional qualification with hands-on training in SEO, SMM, SEM, and Negotiation Skills.
+                </p>
+            </div>
+
+            <!-- Skills -->
+            <div class="card">
+                <h2><i class="fa-solid fa-gears"></i> Key Skills</h2>
+                <div class="skills-container">
+                    <span class="skill-tag">Field Operations</span>
+                    <span class="skill-tag">Auditing & Accounting</span>
+                    <span class="skill-tag">MS Excel & Word</span>
+                    <span class="skill-tag">SEO & SEM</span>
+                    <span class="skill-tag">Social Media Marketing</span>
+                    <span class="skill-tag">B2B Lead Generation</span>
+                    <span class="skill-tag">Canva Design</span>
+                    <span class="skill-tag">Client Negotiation</span>
+                </div>
+            </div>
+
+            <!-- Languages -->
+            <div class="card">
+                <h2><i class="fa-solid fa-language"></i> Languages</h2>
+                <p><strong>Bengali:</strong> Native</p>
+                <p><strong>English:</strong> Professional Working Proficiency</p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Asaduzzaman Razu (AR Akash). All rights reserved.</p>
+    </footer>
+</div>
+
+</body>
+                    </html>
+                    
