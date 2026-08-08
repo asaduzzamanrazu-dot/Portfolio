@@ -3,27 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Asaduzzaman Razu | Portfolio</title>
+<title>Asaduzzaman Razu | Professional Portfolio</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
 <style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Poppins', sans-serif;
-}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
 
 body{
-    background: linear-gradient(135deg,#0f172a,#020617);
+    background:linear-gradient(135deg,#0f172a,#020617);
     color:white;
-    transition:0.4s;
-}
-
-.light-mode{
-    background:#f1f5f9;
-    color:#0f172a;
 }
 
 .container{
@@ -44,59 +33,50 @@ header img{
     box-shadow:0 0 25px #38bdf8;
 }
 
-h1{
-    margin:15px 0;
-    font-size:36px;
-}
+h1{margin:15px 0;font-size:36px;}
+h2{color:#38bdf8;margin-bottom:15px;}
 
-h2{
-    margin-bottom:15px;
-    color:#38bdf8;
-}
-
-.section{
-    margin:50px 0;
-    animation:fadeIn 1s ease;
-}
+.section{margin:50px 0;}
 
 .card{
     background:rgba(255,255,255,0.05);
-    backdrop-filter:blur(10px);
     padding:20px;
     border-radius:12px;
     margin-top:15px;
+    backdrop-filter:blur(10px);
     transition:0.3s;
 }
 
-.card:hover{
-    transform:translateY(-5px);
-}
+.card:hover{transform:translateY(-5px);}
 
-.btn{
-    display:inline-block;
-    padding:10px 18px;
-    background:#38bdf8;
-    color:black;
-    border-radius:6px;
-    margin-top:10px;
-    font-weight:bold;
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
 }
 
 .toggle{
     position:fixed;
     top:20px;
     right:20px;
-    cursor:pointer;
     background:#38bdf8;
     color:black;
     padding:8px 12px;
     border-radius:5px;
+    cursor:pointer;
 }
 
-.grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:20px;
+.whatsapp{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:#25D366;
+    color:white;
+    padding:15px;
+    border-radius:50%;
+    font-size:22px;
+    text-decoration:none;
+    box-shadow:0 0 15px #25D366;
 }
 
 footer{
@@ -105,17 +85,19 @@ footer{
     margin-top:40px;
 }
 
-@keyframes fadeIn{
-    from{opacity:0;transform:translateY(20px);}
-    to{opacity:1;transform:translateY(0);}
+.light-mode{
+    background:#f1f5f9;
+    color:#0f172a;
 }
 </style>
-
 </head>
 
 <body>
 
 <div class="toggle" onclick="toggleMode()">🌙 Mode</div>
+
+<!-- WHATSAPP BUTTON -->
+<a class="whatsapp" href="https://wa.me/8801714390671" target="_blank">💬</a>
 
 <header>
     <img src="Asaduzzaman Razu (AR Akash).png">
@@ -130,84 +112,102 @@ footer{
 <h2>About Me</h2>
 <div class="card">
 <p>
-Master’s graduate in Political Science and NSDA Level-03 Certified Digital Marketer with 8+ years of experience in administration, auditing, and digital marketing.
+I am a dedicated professional with a strong academic background in Political Science and over 8 years of practical experience in administration, accounting, and field auditing. I am also a government-certified Digital Marketer (NSDA Level-03) with hands-on experience in SEO, social media marketing, and lead generation. I aim to contribute effectively in organizational growth through operational excellence and digital expertise.
 </p>
 </div>
+</div>
+
+<!-- EDUCATION -->
+<div class="section">
+<h2>Education</h2>
+
+<div class="card">
+<h3>Master of Social Sciences (MSS) in Political Science</h3>
+<p>Naogaon Government College, National University (Session: 2021–2026)</p>
+<p>Completed coursework in political theory, governance, and development studies.</p>
+</div>
+
+<div class="card">
+<h3>Bachelor of Arts (BA)</h3>
+<p>Naogaon Government College, National University</p>
+<p>Successfully completed undergraduate degree with a focus on humanities and social sciences.</p>
+</div>
+
+<div class="card">
+<h3>Higher Secondary Certificate (HSC)</h3>
+<p>Board of Intermediate & Secondary Education, Rajshahi</p>
+<p>Group: Humanities</p>
+</div>
+
+<div class="card">
+<h3>Secondary School Certificate (SSC)</h3>
+<p>Board of Intermediate & Secondary Education, Rajshahi</p>
+<p>Group: Humanities</p>
+</div>
+
+</div>
+
+<!-- EXPERIENCE -->
+<div class="section">
+<h2>Professional Experience</h2>
+
+<div class="card">
+<h3>Accounts & Field Auditor (2018 – 2026)</h3>
+<p>Naogaon District Construction Workers' Union</p>
+<ul>
+<li>Managed financial records and reconciled accounts using MS Excel.</li>
+<li>Conducted field audits and compliance checks across multiple units.</li>
+<li>Handled office administration, documentation, and policy drafting.</li>
+<li>Communicated with stakeholders and resolved operational issues.</li>
+</ul>
+</div>
+
 </div>
 
 <!-- SKILLS -->
 <div class="section">
 <h2>Skills</h2>
+
 <div class="grid">
-<div class="card">SEO</div>
-<div class="card">Social Media Marketing</div>
+<div class="card">Search Engine Optimization (SEO)</div>
+<div class="card">Social Media Marketing (SMM)</div>
 <div class="card">Lead Generation</div>
-<div class="card">MS Excel</div>
-<div class="card">Canva</div>
-<div class="card">Data Reporting</div>
-</div>
+<div class="card">MS Excel & Data Reporting</div>
+<div class="card">Canva Design</div>
+<div class="card">Field Operations & Auditing</div>
 </div>
 
-<!-- EXPERIENCE -->
+</div>
+
+<!-- CERTIFICATION -->
 <div class="section">
-<h2>Experience</h2>
-<div class="card">
-<h3>Accounts & Field Auditor</h3>
-<p>Naogaon District Construction Workers' Union (2018–2026)</p>
-<p>Handled financial tracking, auditing, and field operations.</p>
-</div>
-</div>
-
-<!-- CERTIFICATES -->
-<div class="section">
-<h2>Certificates</h2>
-<div class="grid">
+<h2>Training & Certification</h2>
 
 <div class="card">
-<p>MSS Political Science</p>
-<a href="2021 - 2026 MASTER OF ARTS (MA) IN POLITICAL SCIENCE.pdf" target="_blank" class="btn">View</a>
+<h3>NSDA Level-03 Certified Digital Marketer</h3>
+<p>Fazlul Haque Technical Training Institute</p>
+<p>Specialized in SEO, social media marketing, and digital communication with practical project experience.</p>
 </div>
 
-<div class="card">
-<p>Bachelor of Arts</p>
-<a href="bachelor of arts certificate.pdf" target="_blank" class="btn">View</a>
-</div>
-
-<div class="card">
-<p>HSC Certificate</p>
-<a href="HSC certificate.pdf" target="_blank" class="btn">View</a>
-</div>
-
-<div class="card">
-<p>SSC Certificate</p>
-<a href="SSC certificate.pdf" target="_blank" class="btn">View</a>
-</div>
-
-</div>
-</div>
-
-<!-- CV -->
-<div class="section">
-<h2>Resume</h2>
-<div class="card">
-<a href="Professional Modern CV Resume (5) (1).pdf" target="_blank" class="btn">Download CV</a>
-</div>
 </div>
 
 <!-- CONTACT -->
 <div class="section">
 <h2>Contact</h2>
+
 <div class="card">
-<p>Email: asadzzamanrazu@gmail.com</p>
-<p>Phone: 01714390671</p>
-<p>Location: Naogaon, Bangladesh</p>
+<p><strong>Email:</strong> asadzzamanrazu@gmail.com</p>
+<p><strong>Phone:</strong> 01714390671</p>
+<p><strong>Location:</strong> Niamotpur, Naogaon, Bangladesh</p>
+<p><strong>WhatsApp:</strong> Click the green button to chat directly</p>
 </div>
+
 </div>
 
 </div>
 
 <footer>
-<p>© 2026 ASADUZZAMAN RAZU</p>
+<p>© 2026 ASADUZZAMAN RAZU | Professional Portfolio</p>
 </footer>
 
 <script>
